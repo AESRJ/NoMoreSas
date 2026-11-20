@@ -13,7 +13,9 @@ Fecha: 2026-11-19. Responsable: Codex. Funcionalidad activa: ninguna.
 
 - Instalar o poner Claude Code en PATH; no fue encontrado en el montaje.
 - Autenticar NotebookLM, seleccionar/crear cuaderno, cargar fuentes y comprobar consulta. El perfil `default` no existe.
+- El intento de login abrió Edge y terminó por timeout sin completar Google; volver a intentarlo con el procedimiento de `docs/notebooklm.md`.
 - No se ha realizado push.
+- Primer commit local en `main`: `ccace9b`, montaje de arnés y estructura de agentes, con la identidad GitHub verificada del usuario.
 
 ## Siguiente sesión de Codex
 

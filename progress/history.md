@@ -24,3 +24,11 @@ La validación final y la referencia del commit se consultan en la entrada de ci
 - Se inició `nlm login --storage protected`, que abrió Edge; requiere completar Google en el navegador. No declarar éxito hasta comprobarlo.
 
 El montaje se realizó y revisó con Codex bajo la excepción inicial autorizada; esto no se presenta como una revisión independiente de producto.
+
+### Cierre
+
+Primer commit creado en `main`: `ccace9bc43cfdedc721e72eea39a17a01a3e0c15`, `chore: montaje de arnés y estructura de agentes`. Autor y committer: Israel Gomez Ahumada, correo noreply de la cuenta GitHub verificada. El cuerpo registra alcance, verificación y pendientes. No se modificó la identidad global de Git ni se hizo push.
+
+El intento de `nlm login --storage protected` finalizó con código 1 por `Login timeout` tras esperar 300 segundos; no se completó la autenticación. El usuario puede reintentarlo mediante el procedimiento documentado. No hay cuaderno ni fuentes de este proyecto cargadas.
+
+Comprobación posterior al primer commit: `git diff-tree --root --no-commit-id --check -r HEAD` sin errores; `init.cmd` correcto; perfiles y workflow YAML parseados correctamente. El árbol estaba limpio. Este cierre se registra en un segundo commit documental, cuyo hash se consulta en `git log`.
