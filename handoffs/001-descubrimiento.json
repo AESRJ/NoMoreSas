@@ -1,0 +1,13 @@
+{
+  "feature_id": "001-descubrimiento",
+  "status": "draft",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/001-descubrimiento",
+  "task_ids": [],
+  "allowed_paths": [],
+  "verification_commands": [],
+  "blockers": ["Resolver Q01 y Q02", "Codex debe producir el plan técnico y las tareas del primer incremento"],
+  "implementation_report": "progress/impl_001-descubrimiento.md",
+  "review_report": "progress/review_001-descubrimiento.md"
+}

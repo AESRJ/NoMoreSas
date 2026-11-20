@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "notebooklm": {
+      "type": "stdio",
+      "command": ".venv/Scripts/notebooklm-mcp.exe",
+      "args": []
+    }
+  }
+}

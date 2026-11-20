@@ -1,0 +1,4 @@
+# Herramientas del arnés; no son dependencias de la futura aplicación.
+specify-cli==1.4.3
+notebooklm-mcp-cli==0.16.5
+pypdf==7.1.1

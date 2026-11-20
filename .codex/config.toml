@@ -1,0 +1,5 @@
+# Iniciar Codex desde la raiz del repositorio.
+[mcp_servers.notebooklm]
+command = ".venv/Scripts/notebooklm-mcp.exe"
+args = []
+startup_timeout_sec = 30

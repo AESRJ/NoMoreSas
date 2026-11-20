@@ -1,0 +1,13 @@
+{
+  "feature_id": "NNN-nombre",
+  "status": "draft",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/NNN-nombre",
+  "task_ids": [],
+  "allowed_paths": [],
+  "verification_commands": [],
+  "blockers": ["Completar spec, plan y tareas antes de marcar ready"],
+  "implementation_report": "progress/impl_NNN-nombre.md",
+  "review_report": "progress/review_NNN-nombre.md"
+}
