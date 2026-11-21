@@ -1,6 +1,8 @@
 # Sesión actual
 
-Fecha: 2026-11-20. Responsable de planificación: Codex. Funcionalidad activa: `MVP-CATALOGO` en fase de entrega, sin implementación iniciada.
+Fecha: 2026-11-20. Responsable de planificación: Codex. `MVP-CATALOGO` bloqueada por destino de código pendiente, sin implementación iniciada.
+
+El usuario autorizó publicar este avance en AESRJ/NoMoreSas y decidió que el código de la aplicación vaya en otro repositorio. No crear código de producto aquí. La pausa de construcción continúa; el siguiente paso es definir el destino y adaptar/validar la entrega allí. Ver ADR 0003.
 
 **Pausa del usuario vigente para construcción.** Trabajo actual: corregir identidad/configuración de Git. Autor y committer confirmados: `AESRJ <vasquez.jorge@uabc.edu.mx>`. Los tres commits locales fueron corregidos conservando árboles, mensajes y fechas; respaldo en `.local/git-before-identity-correction.bundle`. No iniciar Claude ni construcción hasta que el usuario retome esa parte.
 
@@ -19,9 +21,9 @@ React + React Router + Zustand + pnpm; backend Node.js + Express. Primer increme
 
 ## Entrega a Claude
 
-`handoffs/002-catalogo-comparacion.json`, estado ready. Spec, plan, investigación, modelo, contratos, fuentes candidatas, quickstart y 17 tareas en `specs/002-catalogo-comparacion/`. Sin paquetes ni código de aplicación todavía. Ninguna prueba de producto se presenta como ejecutada.
+`handoffs/002-catalogo-comparacion.json`, estado blocked por repositorio destino pendiente. Spec, plan, investigación, modelo, contratos, fuentes candidatas, quickstart y 17 tareas en `specs/002-catalogo-comparacion/` se conservan como avance. Sin paquetes ni código de aplicación todavía. Ninguna prueba de producto se presenta como ejecutada.
 
-Antes de construir: ejecutar `init.cmd` y `python scripts/check_harness.py --implementation-ready handoffs/002-catalogo-comparacion.json`; leer `CLAUDE.md` y la entrega. Crear rama `feat/catalogo-comparacion`; implementar T001–T017, registrar `progress/impl_MVP-CATALOGO.md` y solicitar revisión de Codex. No cambiar la autorización ni marcar done sin revisión.
+Antes de construir: definir el otro repositorio, adaptar las reglas/artefactos y validar una nueva entrega ready allí. Los comandos de quickstart y las rutas de código son propuestas que deben trasladarse y comprobarse en ese destino; no ejecutarlos como implementación en este repositorio.
 
 ## Pendientes posteriores
 

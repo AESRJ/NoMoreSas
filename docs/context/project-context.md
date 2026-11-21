@@ -20,6 +20,6 @@ Claude Code 2.1.329 instalado/autenticado, Node LTS 26.13.1 y pnpm 12.21.0 insta
 
 ## Punto de reanudación
 
-Descubrimiento cerrado mediante ADR 0002. `MVP-CATALOGO` activa en planificación entregada. `handoffs/002-catalogo-comparacion.json` ready; diseño completo y 17 tareas en `specs/002-catalogo-comparacion/`. No se ha escrito aplicación ni ejecutado sus pruebas. Claude toma T001–T017 y registra implementación; Codex revisa después. Continuar desde `progress/current.md`, sin reinicializar Spec Kit ni reemplazar tecnologías.
+Descubrimiento cerrado mediante ADR 0002. Por nueva decisión del usuario (ADR 0003), este repositorio conserva el arnés y avance de planificación; el código de aplicación se construirá en otro repositorio aún pendiente de definir. `MVP-CATALOGO` y su entrega quedan blocked hasta adaptar/validar la entrega en ese destino. Diseño completo y 17 tareas conservados en `specs/002-catalogo-comparacion/`. No se ha escrito aplicación ni ejecutado sus pruebas; no crear aquí apps ni paquetes de producto. El usuario autorizó subir este avance al remoto actual, sin reanudar construcción ni crear un repositorio nuevo todavía.
 
 Los valores de diseño de catálogo/comparación se identifican como supuestos de Codex. Los datos candidatos requieren curación real por Claude. No prometer recursos de hardware a partir de ejemplos del PDF. Q04–Q08 corresponden a incrementos posteriores y no bloquean este catálogo público.

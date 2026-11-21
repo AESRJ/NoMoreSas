@@ -1,5 +1,7 @@
 # Iniciar construcción en Claude Code
 
+**Entrega bloqueada por cambio de destino.** El usuario decidió construir la aplicación en otro repositorio, aún sin definir. El prompt siguiente queda como referencia de planificación; no ejecutarlo aquí. Primero adaptar las rutas, reglas y verificaciones al repositorio de código y obtener una entrega ready para ese destino.
+
 Abrir una terminal nueva en la raíz de este repositorio para recoger Node, pnpm y Claude del PATH. Ejecutar `claude`; si el cliente pide confiar en el proyecto o aceptar el MCP, revisar y aceptar esa configuración. No pegar cookies, tokens ni claves.
 
 Prompt de inicio:

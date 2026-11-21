@@ -4,6 +4,8 @@ Plataforma propuesta para descubrir alternativas open source, evaluar hardware y
 
 Este repositorio contiene el entorno de desarrollo y su arnés de agentes. La aplicación todavía no está implementada.
 
+Por decisión del usuario, **el código de la aplicación se construirá en otro repositorio**. Este repositorio conserva el avance del arnés, las especificaciones, los planes y su documentación. El destino de código está pendiente de definir; ver [ADR 0003](docs/decisions/0003-repositorio-de-codigo-separado.md).
+
 ## Inicio en Windows
 
 ```powershell
@@ -29,7 +31,7 @@ Python 3.12 y Git son los prerrequisitos. La instalación necesita Internet. No 
 
 Stack confirmado: **React + Vite + React Router + Zustand**, paquetes con **pnpm** y API **Node.js + Express**. El usuario confirmó React/Router/Zustand/pnpm/Express; Vite y JavaScript forman parte del plan técnico de Codex. El primer incremento es catálogo público y comparación, con su diseño en [spec 002](specs/002-catalogo-comparacion/plan.md).
 
-Claude Code 2.1.329, Node.js 26.13.1 y pnpm 12.21.0 instalados; Claude y NotebookLM autenticados. Abrir una terminal nueva después de los ajustes de PATH. No hay código de aplicación todavía: el siguiente paso es que Claude construya las tareas de la entrega `handoffs/002-catalogo-comparacion.json` y Codex revise el resultado.
+Claude Code 2.1.329, Node.js 26.13.1 y pnpm 12.21.0 instalados; Claude y NotebookLM autenticados. Abrir una terminal nueva después de los ajustes de PATH. La entrega `handoffs/002-catalogo-comparacion.json` está bloqueada hasta definir el repositorio de código y adaptar allí la entrega; no ejecutar implementación en este repositorio.
 
 ## Mapa
 

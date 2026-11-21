@@ -2,6 +2,8 @@
 
 ## Responsabilidades
 
+- Este repositorio conserva arnés, planificación y documentación. Por instrucción del usuario, el código de aplicación se construirá en otro repositorio aún pendiente de definir. No crear aquí `apps/` ni paquetes de producto. Ver ADR 0003; adaptar y validar la entrega en el destino antes de autorizar construcción.
+
 - El usuario dirige producto y prioridades.
 - **Codex siempre planifica y revisa. Claude Code construye la aplicación.** Codex puede editar especificaciones, planes, tareas, decisiones, documentación y memoria; no implementar ni reparar código de producto, ni ejecutar `speckit-implement`.
 - El montaje inicial del arnés, sus verificadores y configuración está autorizado expresamente en esta sesión. Esa excepción no autoriza construir la aplicación con Codex.
