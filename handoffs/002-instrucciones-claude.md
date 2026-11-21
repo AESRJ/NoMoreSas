@@ -1,6 +1,6 @@
 # Iniciar construcción en Claude Code
 
-**Entrega bloqueada por cambio de destino.** El usuario decidió construir la aplicación en otro repositorio, aún sin definir. El prompt siguiente queda como referencia de planificación; no ejecutarlo aquí. Primero adaptar las rutas, reglas y verificaciones al repositorio de código y obtener una entrega ready para ese destino.
+**Entrega transferida a otro checkout.** El usuario confirmó AESRJ/NoMoreSaaS_Frontend y autorizó construcción. La entrega ready y tareas activas están en `.project/` de `C:/Users/Roel/Documents/NoMoreSaaS_Frontend`; ver ADR 0004. El prompt siguiente permanece como referencia histórica, no ejecutarlo desde el arnés ni duplicar sus checkboxes. El destino tiene AGENTS.md/CLAUDE.md e instrucciones adaptadas propias.
 
 Abrir una terminal nueva en la raíz de este repositorio para recoger Node, pnpm y Claude del PATH. Ejecutar `claude`; si el cliente pide confiar en el proyecto o aceptar el MCP, revisar y aceptar esa configuración. No pegar cookies, tokens ni claves.
 

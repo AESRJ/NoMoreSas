@@ -2,9 +2,9 @@
 
 Plataforma propuesta para descubrir alternativas open source, evaluar hardware y preparar planes de instalación y prompts por etapas. Fuente de producto: [NoMoreSaaS.pdf](NoMoreSaaS.pdf), 13 páginas.
 
-Este repositorio contiene el entorno de desarrollo y su arnés de agentes. La aplicación todavía no está implementada.
+Este repositorio contiene el entorno de desarrollo y su arnés de agentes. El primer incremento de la aplicación (catálogo y comparación) ya está implementado, revisado y publicado en main del repositorio de código; ver [revisión y evidencia](progress/review_MVP-CATALOGO.md). Preview de desarrollo local: http://127.0.0.1:5173.
 
-Por decisión del usuario, **el código de la aplicación se construirá en otro repositorio**. Este repositorio conserva el avance del arnés, las especificaciones, los planes y su documentación. El destino de código está pendiente de definir; ver [ADR 0003](docs/decisions/0003-repositorio-de-codigo-separado.md).
+Por decisión del usuario, **el código de la aplicación se construye en [AESRJ/NoMoreSaaS_Frontend](https://github.com/AESRJ/NoMoreSaaS_Frontend)**. Este repositorio conserva el arnés, las especificaciones, los planes y su documentación. El checkout de código está separado en `C:/Users/Roel/Documents/NoMoreSaaS_Frontend`; ver [ADR 0004](docs/decisions/0004-entorno-de-codigo-y-construccion.md).
 
 ## Inicio en Windows
 
@@ -31,7 +31,7 @@ Python 3.12 y Git son los prerrequisitos. La instalación necesita Internet. No 
 
 Stack confirmado: **React + Vite + React Router + Zustand**, paquetes con **pnpm** y API **Node.js + Express**. El usuario confirmó React/Router/Zustand/pnpm/Express; Vite y JavaScript forman parte del plan técnico de Codex. El primer incremento es catálogo público y comparación, con su diseño en [spec 002](specs/002-catalogo-comparacion/plan.md).
 
-Claude Code 2.1.329, Node.js 26.13.1 y pnpm 12.21.0 instalados; Claude y NotebookLM autenticados. Abrir una terminal nueva después de los ajustes de PATH. La entrega `handoffs/002-catalogo-comparacion.json` está bloqueada hasta definir el repositorio de código y adaptar allí la entrega; no ejecutar implementación en este repositorio.
+Claude Code 2.1.329, Node.js 26.13.1 y pnpm 12.21.0 instalados; Claude y NotebookLM autenticados. Abrir una terminal nueva después de los ajustes de PATH. La entrega histórica `handoffs/002-catalogo-comparacion.json` referencia el destino: la entrega ready para construcción y sus tareas activas están en `.project/` del repositorio de código; no ejecutar implementación en este repositorio.
 
 ## Mapa
 

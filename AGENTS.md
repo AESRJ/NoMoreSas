@@ -2,7 +2,7 @@
 
 ## Responsabilidades
 
-- Este repositorio conserva arnés, planificación y documentación. Por instrucción del usuario, el código de aplicación se construirá en otro repositorio aún pendiente de definir. No crear aquí `apps/` ni paquetes de producto. Ver ADR 0003; adaptar y validar la entrega en el destino antes de autorizar construcción.
+- Este repositorio conserva arnés, planificación y documentación. El código vive en AESRJ/NoMoreSaaS_Frontend, checkout separado `C:/Users/Roel/Documents/NoMoreSaaS_Frontend`. No crear aquí `apps/` ni paquetes de producto. El usuario autorizó reanudar construcción en ese destino; ver ADR 0004. Allí las tareas/evidencia activas están agrupadas en `.project/`; no mantener dos listas de ejecución activas.
 
 - El usuario dirige producto y prioridades.
 - **Codex siempre planifica y revisa. Claude Code construye la aplicación.** Codex puede editar especificaciones, planes, tareas, decisiones, documentación y memoria; no implementar ni reparar código de producto, ni ejecutar `speckit-implement`.

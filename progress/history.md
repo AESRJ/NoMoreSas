@@ -105,3 +105,33 @@ Se comprobarán estructura del arnés, rechazo de implementación bloqueada, for
 Validación previa correcta: arnés pasa; modo implementation-ready rechaza la entrega blocked como corresponde; git diff --check sin errores; identidad local AESRJ y correo confirmado; git ls-files no incluye .local, .venv ni .env. Primer push rechazado por GitHub: el token OAuth carecía del scope workflow necesario para crear .github/workflows/harness.yml. Se solicitó gh auth refresh --scopes workflow y el usuario completó la autorización. La decisión de repositorio separado y el contexto actualizado se sincronizaron en NotebookLM, fuente e59d01b0-86ff-4c0c-be1c-c329247aa1b7. Se reintenta el push normal, sin retirar el workflow ni forzar referencias.
 
 Publicación confirmada: git push -u origin main terminó con código 0; a85a8d7ce6bdf338af76d851f90007485059860b quedó en main remoto. git rev-parse HEAD y git ls-remote origin refs/heads/main coincidieron exactamente; árbol limpio tras el push y upstream configurado. La primera consulta de ejecuciones de Actions aún no mostraba resultados; no se declaró CI aprobada sin comprobarla. Se registra este cierre en un commit documental adicional y se publica dentro de la misma autorización de avance.
+
+## Checkout separado y construcción autorizada — Codex / Claude Code
+
+Usuario proporciona https://github.com/AESRJ/NoMoreSaaS_Frontend.git, pide entorno separado y comenzar construcción si está configurado. Esta instrucción revoca la pausa de producto para el destino. GitHub API confirmó repo vacío y permisos de escritura con AESRJ.
+
+Codex clonó en C:/Users/Roel/Documents/NoMoreSaaS_Frontend, como carpeta hermana del arnés, no repo anidado. Configuró identidad local AESRJ/correo confirmado. Adaptó snapshot SDD en .project/specs, entrega en .project/handoffs, estado e informes en .project/progress; apps/web y apps/api quedan para producto. .project/source.json identifica la revisión del arnés importada; las tareas activas pertenecen solo al destino. No se copiaron PDF, .venv, historial completo de progreso ni credenciales. Configuraciones MCP propias del equipo se ignoran por Git.
+
+Se copiaron skills/scripts oficiales Spec Kit y se adaptaron reglas/puntero de feature sin reescribir sus skills. Verificación previa: entrega ready, destino, artefactos e IDs de las 17 tareas correctos. Base del entorno guardada en fbc49e0, rama feat/catalogo-comparacion. Esta base contiene infraestructura y documentos, no implementación de producto por Codex.
+
+Se lanzó Claude Code como constructor mediante CLI no interactiva, con acceptEdits y herramientas de desarrollo autorizadas, sin dangerously-skip-permissions. Se prohibieron push/reset/clean y modificaciones de otros proyectos; permisos del sistema para el proceso delegado solicitados porque el checkout está fuera del workspace de escritura. Prompt exige completar T001–T017, curar fuentes oficiales, ejecutar lint/test/build/e2e y dejar evidencia real y capturas para revisión de Codex. Resultados aún en curso al registrar este punto; no se anuncian aprobados.
+
+### Resultado y revisión del incremento
+
+El usuario pidió trabajo automático sin consultas rutinarias; se continúa dentro del alcance de catálogo acordado. Se corrigió PATH de Bash mediante BASH_ENV en .local y se reanudó la misma sesión de Claude, sin borrar avances. Un aviso no fatal de stderr había interrumpido PowerShell; se ajustó el tratamiento de stderr. Las denegaciones de comandos concretos se conservaron como tales, sin usar bypass global de permisos.
+
+Claude terminó T001–T017 y dejó informes de implementación y seguridad. Codex ejecutó independientemente lint, 80 pruebas API + 56 frontend, build y 22 e2e de 1280/360 con API y web reales, todos correctos. Se examinaron API, datos, cliente/estado/rutas y capturas. R1 visual inicial de botones ya estaba corregido en la versión final; el feedback preparado no se ejecutó para evitar trabajo innecesario. Se documenta la excepción T002 (sin evidencia previa de pruebas fallidas) y la lectura automatizada impedida del archivo LICENSE de Forgejo, respaldado por documentación oficial/README. No se presenta revisión como certificación absoluta.
+
+Operaciones Git de producto registradas por Codex después de revisión (implementación escrita por Claude), identidad AESRJ y commits coherentes: 7dd2a70 producto/pruebas, 3009d6c CI/comandos, 969baf1 evidencia/cierre. Base del entorno fbc49e0. Árbol de código limpio al finalizar commits; sin push. La entrega de código pasa a closed por el revisor; el verificador de infraestructura consulta el cierre correctamente y rechaza nueva implementación sobre entrega cerrada. MVP-CATALOGO se marca done aquí con evidencia en progress/review_MVP-CATALOGO.md; las siguientes funciones siguen pendientes.
+
+Preview local iniciado con pnpm dev en segundo plano/ventana oculta; 127.0.0.1:5173 devuelve HTTP 200 y API 3001 devuelve status ok. PID y logs en .local del código. No despliegue ni exposición pública. Documentación de autoridad y reproducción actualizada en ADR 0004, contexto y montaje paso a paso.
+
+### Integración/publicación posterior al cierre local
+
+Para completar el trabajo en el repositorio proporcionado bajo la instrucción del usuario de realizarlo en automático, Codex comprobó cuenta AESRJ, árbol limpio y remoto aún vacío, configuró el helper gh solo en ese checkout e integró feat/catalogo-comparacion a main mediante fast-forward. Push de 969baf1 verificado comparando HEAD con git ls-remote; sin force, sin despliegue. El cierre documental posterior f13e6d2b8b3167f53781e96ebc9e544e28284dae también quedó publicado y verificado. Las referencias previas a ausencia de push describen la fase local anterior, no el estado final.
+
+GitHub Actions del incremento 969baf1 completó success: run 44856440480, https://github.com/AESRJ/NoMoreSaaS_Frontend/actions/runs/44856440480. Se comprueba por separado el run del cierre documental. El arnés y el repositorio de código mantienen roles y ubicaciones separadas; no se inició una funcionalidad adicional por inferencia.
+
+Verificación final: CI del último HEAD f13e6d2 completó success (run 44856563386); API localhost sigue respondiendo status ok. Los dos checkouts quedan revisados y el código publicado conserva identidad AESRJ. El resumen final de implementación, repositorios y evidencia se sincroniza a NotebookLM; no se publican credenciales, entornos virtuales, capturas locales ni logs de ejecución.
+
+Memoria sincronizada con éxito: fuente e1ae0a7b-59d5-4a26-b462-040e469d06ab, titulada ACTUAL - codigo separado construido revisado publicado CI correcta - 2026-11-20. Contiene contexto vigente y resumen de revisión; no borra los snapshots históricos.
