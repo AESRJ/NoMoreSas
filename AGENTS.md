@@ -32,6 +32,8 @@ Codex usa `$speckit-specify`, `$speckit-clarify`, `$speckit-plan`, `$speckit-tas
 
 Commits en español, pequeños y descriptivos; explicar qué, por qué y cómo se verificó. Usar la identidad real del usuario configurada en Git; no inventar datos ni añadir coautoría automática. Documentar la asistencia de agentes en la bitácora. No publicar con `push` salvo instrucción explícita. No versionar credenciales. Ver `CHECKPOINTS.md` y `docs/conventions.md`.
 
+Identidad confirmada explícitamente por el usuario: **AESRJ <vasquez.jorge@uabc.edu.mx>**. Usarla como autor y committer en este repositorio. No inferir la autoría desde otra sesión activa de GitHub CLI, SSH, Google o Claude. La identidad de commits y la autenticación de GitHub se verifican por separado. No reanudar la construcción mientras el usuario mantenga la pausa.
+
 ## Documentación por demanda
 
 - Producto y preguntas: `docs/product/`.

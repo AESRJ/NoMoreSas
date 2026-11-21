@@ -2,6 +2,10 @@
 
 Fecha: 2026-11-20. Responsable de planificación: Codex. Funcionalidad activa: `MVP-CATALOGO` en fase de entrega, sin implementación iniciada.
 
+**Pausa del usuario vigente para construcción.** Trabajo actual: corregir identidad/configuración de Git. Autor y committer confirmados: `AESRJ <vasquez.jorge@uabc.edu.mx>`. Los tres commits locales fueron corregidos conservando árboles, mensajes y fechas; respaldo en `.local/git-before-identity-correction.bundle`. No iniciar Claude ni construcción hasta que el usuario retome esa parte.
+
+Corrección verificada: GitHub CLI autenticado como AESRJ; origin configurado por HTTPS (`https://github.com/AESRJ/NoMoreSas.git`) con credenciales de gh y username AESRJ solo para este repositorio. `git ls-remote origin` terminó correctamente; remoto vacío, sin push.
+
 ## Entorno preparado
 
 - Claude Code 2.1.329 instalado mediante WinGet, autenticado mediante cuenta de Claude.

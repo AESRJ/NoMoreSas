@@ -75,3 +75,23 @@ Análisis de consistencia de solo lectura: 12 requisitos funcionales y 5 criteri
 - No hay paquetes ni código de aplicación; lint/test/build/e2e de producto quedan para Claude y no se anuncian como ejecutados.
 
 Siguiente: abrir Claude en la raíz, aprobar su MCP si se desea utilizarlo allí y seguir `handoffs/002-instrucciones-claude.md`. Claude construye en feat/catalogo-comparacion e informa; Codex revisa. Sin push. El commit de esta sesión incluye alcance, verificación y pendientes, con la misma identidad Git verificada del usuario.
+
+## 2026-11-20 — Corrección de Git solicitada por el usuario — Codex
+
+El usuario corrigió expresamente la identidad: **AESRJ <vasquez.jorge@uabc.edu.mx>**. La identidad issgg/Israel usada al principio fue una inferencia incorrecta a partir de otra sesión activa de GitHub CLI. Las entradas anteriores se conservan como historia del error; no son la identidad vigente ni justifican volver a configurarla.
+
+Comprobación previa: árbol limpio, rama main con tres commits y remoto AESRJ/NoMoreSas. La API de GitHub informó size 0 y repositorio vacío al listar refs (HTTP 409). La conexión SSH no respondió y se interrumpió; no se interpreta ese resultado como identidad autenticada. GitHub CLI sí estaba autenticado como issgg y se inició un acceso web para AESRJ sin borrar aquella cuenta.
+
+Se guardó un respaldo en `.local/git-before-identity-correction.bundle` y se verificó con git bundle verify. Se configuraron `user.name=AESRJ`, `user.email=vasquez.jorge@uabc.edu.mx` y `user.useConfigOnly=true` solo para este repositorio. Se reconstruyeron los tres commits locales usando commit-tree y se actualizó main con comparación atómica del HEAD esperado. Autor y committer corregidos, preservando árboles, mensajes exactos y fechas. Sin push ni cambios en la identidad global del equipo.
+
+| Hash anterior | Hash corregido |
+| --- | --- |
+| ccace9bc43cfdedc721e72eea39a17a01a3e0c15 | 97e07f563c7654068fa5379c0068b2bf8eae81c0 |
+| 03f041a59a7a9b626c173ef219a2c562bbecd0b0 | f6b20bdfdf608aead962e848f965c9a818105189 |
+| ef8aea5675df4ed09d311dc41ab82de516031760 | 3f0acbc623001abd10480557ce8e079ffafb23f7 |
+
+Se actualizaron reglas, convenciones, contexto y procedimiento para que Codex y Claude utilicen la identidad confirmada y distingan autoría de autenticación. La aplicación permanece pausada por petición del usuario. La corrección de Git no autoriza reanudar construcción.
+
+Verificación: git log confirma AESRJ/correo indicado tanto para autor como committer en los tres commits; config local correcta y useConfigOnly activo; todos los árboles, mensajes y fechas comprobados por el script de corrección. Verificador del arnés y git diff --check correctos. Se añadió a NotebookLM la fuente de corrección vigente `a2b95307-4e4c-4ae9-a74f-0c1b462396b3`, sin borrar snapshots históricos. El acceso web de GitHub sigue pendiente de completarse con AESRJ; no se presenta la autenticación de esa cuenta como verificada.
+
+Confirmación posterior: el acceso web finalizó con `Logged in as AESRJ`; `gh api user --jq .login` confirmó AESRJ. Se cambió únicamente origin a `https://github.com/AESRJ/NoMoreSas.git` y se configuró credential.helper local para gh con username AESRJ, sin borrar la cuenta anterior ni modificar helpers globales. `git ls-remote origin` devolvió código 0 y ninguna ref: acceso HTTPS correcto y remoto aún vacío. Queda resuelto el estado de autenticación pendiente descrito en el párrafo anterior. Sin push. El commit documental se actualiza antes de publicar para reflejar este resultado final.

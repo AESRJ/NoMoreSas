@@ -1,10 +1,14 @@
 # Contexto recuperable de NoMoreSaaS
 
-Actualizado: 2026-11-20. Remoto: `git@github.com:AESRJ/NoMoreSas.git`. El original `NoMoreSaaS.pdf` y `docs/product/` describen la visión; el stack se confirmó directamente con el usuario en esta sesión, no se deduce del PDF.
+Actualizado: 2026-11-20. Remoto: `https://github.com/AESRJ/NoMoreSas.git`. El original `NoMoreSaaS.pdf` y `docs/product/` describen la visión; el stack se confirmó directamente con el usuario en esta sesión, no se deduce del PDF.
 
 ## Reglas estables
 
 Codex planifica y revisa; Claude Code construye. SDD con GitHub Spec Kit 1.4.3. Una funcionalidad activa, tareas/entregas persistentes y evidencia real antes de cerrar. Git conserva la autoridad; NotebookLM es memoria auxiliar con fuentes. No secretos en Git ni memoria. No push sin solicitud explícita.
+
+Identidad Git confirmada por el usuario: **AESRJ <vasquez.jorge@uabc.edu.mx>** para autor y committer. Se corrigió la atribución errónea de los tres commits locales sin cambiar sus árboles, mensajes o fechas. Los hashes iniciales quedaron reemplazados; ver la corrección al final de `progress/history.md`. No inferir autoría desde cuentas conectadas a otras herramientas. La construcción está pausada por el usuario; la corrección de Git no la reanuda.
+
+Autenticación verificada: GitHub CLI activo como AESRJ, confirmado por `gh api user`; acceso al remoto mediante `git ls-remote origin` por HTTPS correcto, sin refs porque sigue vacío. Credential helper y username AESRJ configurados solo en este repositorio; se utiliza el almacén seguro de GitHub CLI y no tokens en archivos del proyecto. No se eliminó la sesión de la otra cuenta ni se modificó la identidad global de Git.
 
 ## Tecnologías y alcance confirmados
 
