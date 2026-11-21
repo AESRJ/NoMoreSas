@@ -1,22 +1,24 @@
 # Sesión actual
 
-Fecha: 2026-11-19. Responsable: Codex. Funcionalidad activa: ninguna.
+Fecha: 2026-11-20. Responsable de planificación: Codex. Funcionalidad activa: `MVP-CATALOGO` en fase de entrega, sin implementación iniciada.
 
-## Completado
+## Entorno preparado
 
-- Leído el PDF de 13 páginas y conservado el original.
-- Revisadas las fuentes de Betta Tech, Spec Kit y NotebookLM MCP.
-- Instaladas herramientas locales y generadas integraciones oficiales de Spec Kit para ambos clientes.
-- Preparadas reglas, perfiles de Claude, memoria, backlog, constitución, entregas y verificación.
+- Claude Code 2.1.329 instalado mediante WinGet, autenticado mediante cuenta de Claude.
+- Node.js LTS 26.13.1 y pnpm 12.21.0 instalados y verificados. PATH del usuario actualizado para pnpm y Claude, preservando sus entradas; abrir una terminal nueva para recoger cambios.
+- NotebookLM autenticado con almacenamiento protegido. Cuaderno exclusivo **NoMoreSaaS - contexto de desarrollo**; ID en `.local/notebooklm.json`.
+- PDF y AGENTS cargados; consulta con citas correcta. MCP stdio comprobado: initialize, 55 herramientas y notebook_get del cuaderno correctos. Codex reconoce el servidor habilitado; Claude lo reconoce pero indica Pending approval hasta aceptarlo al ejecutar `claude`.
 
-## Pendiente externo
+## Decisiones confirmadas por el usuario
 
-- Instalar o poner Claude Code en PATH; no fue encontrado en el montaje.
-- Autenticar NotebookLM, seleccionar/crear cuaderno, cargar fuentes y comprobar consulta. El perfil `default` no existe.
-- El intento de login abrió Edge y terminó por timeout sin completar Google; volver a intentarlo con el procedimiento de `docs/notebooklm.md`.
-- No se ha realizado push.
-- Primer commit local en `main`: `ccace9b`, montaje de arnés y estructura de agentes, con la identidad GitHub verificada del usuario.
+React + React Router + Zustand + pnpm; backend Node.js + Express. Primer incremento: catálogo público, búsqueda, fichas y comparación. Vite/JavaScript documentados en el plan de Codex. No se atribuye este stack al PDF.
 
-## Siguiente sesión de Codex
+## Entrega a Claude
 
-Resolver stack y primer incremento (Q01/Q02), registrar ADR y ejecutar el flujo Spec Kit. No hay entrega `ready` para que Claude construya producto todavía. Ver `handoffs/001-descubrimiento.json`.
+`handoffs/002-catalogo-comparacion.json`, estado ready. Spec, plan, investigación, modelo, contratos, fuentes candidatas, quickstart y 17 tareas en `specs/002-catalogo-comparacion/`. Sin paquetes ni código de aplicación todavía. Ninguna prueba de producto se presenta como ejecutada.
+
+Antes de construir: ejecutar `init.cmd` y `python scripts/check_harness.py --implementation-ready handoffs/002-catalogo-comparacion.json`; leer `CLAUDE.md` y la entrega. Crear rama `feat/catalogo-comparacion`; implementar T001–T017, registrar `progress/impl_MVP-CATALOGO.md` y solicitar revisión de Codex. No cambiar la autorización ni marcar done sin revisión.
+
+## Pendientes posteriores
+
+Construcción por Claude, revisión de Codex y evidencia real de producto. Cuentas, proyectos, hardware, estimación, prompts y despliegue siguen fuera de este incremento. No se ha hecho push. Si los clientes aún no muestran MCP, recargar la sesión y aceptar la configuración de proyecto; la CLI y el servidor común están comprobados.

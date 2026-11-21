@@ -1,0 +1,13 @@
+{
+  "feature_id": "MVP-CATALOGO",
+  "status": "ready",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/002-catalogo-comparacion",
+  "task_ids": ["T001", "T002", "T003", "T004", "T005", "T006", "T007", "T008", "T009", "T010", "T011", "T012", "T013", "T014", "T015", "T016", "T017"],
+  "allowed_paths": ["apps", "package.json", "pnpm-workspace.yaml", "pnpm-lock.yaml", "eslint.config.js", "playwright.config.js", ".env.example", ".gitignore", ".github/workflows/catalog.yml", "tests/e2e", "README.md", "docs/verification.md", "docs/context/project-context.md", "progress/impl_MVP-CATALOGO.md", "progress/security_MVP-CATALOGO.md", "progress/current.md", "progress/history.md", "specs/002-catalogo-comparacion/tasks.md"],
+  "verification_commands": ["pnpm lint", "pnpm test", "pnpm build", "pnpm test:e2e", "init.cmd"],
+  "blockers": [],
+  "implementation_report": "progress/impl_MVP-CATALOGO.md",
+  "review_report": "progress/review_MVP-CATALOGO.md"
+}

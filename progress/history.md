@@ -32,3 +32,46 @@ Primer commit creado en `main`: `ccace9bc43cfdedc721e72eea39a17a01a3e0c15`, `cho
 El intento de `nlm login --storage protected` finalizó con código 1 por `Login timeout` tras esperar 300 segundos; no se completó la autenticación. El usuario puede reintentarlo mediante el procedimiento documentado. No hay cuaderno ni fuentes de este proyecto cargadas.
 
 Comprobación posterior al primer commit: `git diff-tree --root --no-commit-id --check -r HEAD` sin errores; `init.cmd` correcto; perfiles y workflow YAML parseados correctamente. El árbol estaba limpio. Este cierre se registra en un segundo commit documental, cuyo hash se consulta en `git log`.
+
+## 2026-11-20 — Activación del entorno y primer plan SDD — Codex
+
+Objetivo: resolver los pendientes para comenzar a trabajar, conservando Codex como planificador y Claude como constructor.
+
+### Confirmaciones del usuario
+
+- Primer incremento: catálogo público, búsqueda, fichas y comparación.
+- Tecnologías de clase: React, pnpm, Zustand y React Router.
+- Backend: Express, elegido tras presentar Express, NestJS y FastAPI.
+- Se explicó que el plan utiliza Vite para React. JavaScript ESM y catálogo JSON validado son elecciones técnicas de Codex para este incremento.
+- El PDF se revisó de nuevo completo: 13 páginas, sin imágenes incrustadas. No se atribuyó al PDF la elección de frontend/backend. Se retiró la propuesta inicial de Django; no se instaló ni construyó con él.
+
+### Entorno y memoria
+
+1. `init.cmd` comprobó el arnés base y el árbol estaba limpio al comenzar.
+2. `nlm login --storage protected`: usuario completó Google en Edge; `login --check` devolvió sesión válida. No se guardan aquí email, cookies ni tokens.
+3. Se creó el cuaderno exclusivo NoMoreSaaS - contexto de desarrollo; ID guardado en `.local/notebooklm.json`, ignorado por Git. No se modificaron cuadernos ajenos al proyecto.
+4. Se cargaron PDF (`af4ee5df-2ca7-4fb3-838c-c4650b65c812`) y AGENTS (`630e8dfa-dafb-49fb-838a-6097ec3bf4fc`). Consulta real devolvió respuesta con citas de ambos.
+5. `winget install Anthropic.ClaudeCode` instaló 2.1.329. `claude auth login --claudeai` completó acceso; `auth status` confirmó loggedIn true. No hubo inferencia ni construcción de producto.
+6. WinGet instaló Node LTS 26.13.1. npm instaló pnpm 12.21.0 en el prefijo del usuario. Primer intento de pnpm falló porque el proceso no veía Node en PATH; se repitió correctamente añadiéndolo solo a ese proceso. Se añadieron directorios de pnpm y Claude al PATH del usuario preservando entradas existentes.
+7. Prueba stdio MCP: initialize, list_tools (55) y notebook_get del cuaderno correctos. Primer intento del comprobador usó `isError`; se corrigió al atributo `is_error` del SDK instalado y se repitió con código 0.
+8. Comprobación nativa: Codex reconoce el MCP habilitado. Claude reconoce `.mcp.json`, pero muestra Pending approval e indica abrir `claude` para aprobar. No se saltó ese consentimiento ni se afirma que Claude ya consultó el servidor.
+9. Se cargaron snapshots de contexto (`a428be09-1cde-4aef-9eb7-4ddb05344826`), ADR 0002 (`94e580e6-d440-4c62-aeea-3397559ffbfd`), spec 002 (`330845b1-5792-4f7d-bdcd-af4a496c6783`) y plan 002 (`9de909f3-f279-4584-a6c7-9d8a38337b91`), todos con título y fecha 2026-11-20. No hay sincronización automática.
+10. Una consulta nueva limitada a esas cuatro fuentes recuperó React/Router/Zustand/pnpm, Express, Vite, el alcance inicial y la construcción a cargo de Claude con citas a las cuatro. Respuesta completa guardada únicamente en `.local/notebooklm-stack-query.json`; no sustituye las decisiones en Git.
+
+### Planificación y análisis
+
+Se aplicaron las habilidades oficiales speckit-specify, speckit-plan, speckit-tasks y speckit-analyze. Se ejecutaron resolve-template spec-template, setup-plan, setup-tasks y check-prerequisites con RequireSpec/RequireTasks/IncludeTasks. No hay extensions.yml ni hooks que ejecutar. Investigación auxiliar requerida por speckit-plan: fuentes oficiales y recomendaciones, sin edición ni código de producto.
+
+Artefactos: ADR 0002; spec 002 con tres historias; checklist de requisitos; plan Vite/React/Express; research; modelo; contratos HTTP/UI; guía de fuentes candidatas; quickstart; 17 tareas; entrega ready y prompt para Claude. Las candidatas de catálogo aún requieren curación real en T003; no se publican como datos verificados.
+
+Análisis de consistencia de solo lectura: 12 requisitos funcionales y 5 criterios medibles con tareas asociadas, 17 IDs únicos y 23 campos canónicos con referencias explícitas en tareas de implementación (T002/T005). Sin marcadores pendientes ni bloqueos críticos detectados. No constituye revisión de una aplicación implementada.
+
+### Verificación y siguiente paso
+
+- `init.cmd`, con PATH actualizado: código 0 y cinco herramientas reconocidas (git, codex, claude, node, pnpm.cmd).
+- `check_harness.py --implementation-ready handoffs/002-catalogo-comparacion.json`: código 0.
+- `python -m unittest discover -s tests -v`: nueve pruebas del arnés correctas.
+- Enlaces relativos de README, docs y spec 002: sin destinos ausentes. `git diff --check`: sin errores de contenido.
+- No hay paquetes ni código de aplicación; lint/test/build/e2e de producto quedan para Claude y no se anuncian como ejecutados.
+
+Siguiente: abrir Claude en la raíz, aprobar su MCP si se desea utilizarlo allí y seguir `handoffs/002-instrucciones-claude.md`. Claude construye en feat/catalogo-comparacion e informa; Codex revisa. Sin push. El commit de esta sesión incluye alcance, verificación y pendientes, con la misma identidad Git verificada del usuario.

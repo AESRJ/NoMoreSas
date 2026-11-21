@@ -27,7 +27,9 @@ Python 3.12 y Git son los prerrequisitos. La instalación necesita Internet. No 
 4. Codex revisa el resultado. Una tarea se cierra con evidencia y revisión independiente.
 5. Ambos dejan contexto persistente. NotebookLM ayuda a consultar fuentes; los artefactos aprobados permanecen en Git.
 
-El siguiente trabajo de Codex es resolver [las decisiones pendientes](docs/product/open-questions.md), especialmente el stack, y preparar la primera entrega de implementación. Abre Claude Code en esta carpeta una vez instalado; su CLI no se encontró durante el montaje.
+Stack confirmado: **React + Vite + React Router + Zustand**, paquetes con **pnpm** y API **Node.js + Express**. El usuario confirmó React/Router/Zustand/pnpm/Express; Vite y JavaScript forman parte del plan técnico de Codex. El primer incremento es catálogo público y comparación, con su diseño en [spec 002](specs/002-catalogo-comparacion/plan.md).
+
+Claude Code 2.1.329, Node.js 26.13.1 y pnpm 12.21.0 instalados; Claude y NotebookLM autenticados. Abrir una terminal nueva después de los ajustes de PATH. No hay código de aplicación todavía: el siguiente paso es que Claude construya las tareas de la entrega `handoffs/002-catalogo-comparacion.json` y Codex revise el resultado.
 
 ## Mapa
 

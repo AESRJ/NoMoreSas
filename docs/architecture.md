@@ -15,7 +15,7 @@ Se usa GitHub Spec Kit oficial, instalado desde `specify-cli==1.4.3`, con integr
 - Estimación mínima/recomendada y validaciones de compatibilidad.
 - Planes por etapas, prompts acotados y seguimiento del avance.
 
-Son límites conceptuales, no una decisión de microservicios ni una arquitectura técnica aprobada. El stack, almacenamiento, autenticación y despliegue están pendientes. Priorizar una estructura simple y comprobable cuando se resuelvan.
+Son límites conceptuales; no implican microservicios. El 2026-11-20 se confirmó React + React Router + Zustand + pnpm y Node.js + Express. El primer plan utiliza Vite/JavaScript, dos aplicaciones en workspace pnpm y catálogo JSON validado de solo lectura. La autenticación, persistencia de proyectos y despliegue requieren planes posteriores. Ver ADR 0002 y `specs/002-catalogo-comparacion/plan.md`.
 
 ## Límites del MVP
 
