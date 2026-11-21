@@ -8,7 +8,7 @@ Codex planifica y revisa; Claude Code construye. SDD con GitHub Spec Kit 1.4.3. 
 
 Identidad Git confirmada por el usuario: **AESRJ <vasquez.jorge@uabc.edu.mx>** para autor y committer. Se corrigió la atribución errónea de los tres commits locales sin cambiar sus árboles, mensajes o fechas. Los hashes iniciales quedaron reemplazados; ver la corrección al final de `progress/history.md`. No inferir autoría desde cuentas conectadas a otras herramientas. La construcción está pausada por el usuario; la corrección de Git no la reanuda.
 
-Autenticación verificada: GitHub CLI activo como AESRJ, confirmado por `gh api user`; acceso al remoto mediante `git ls-remote origin` por HTTPS correcto, sin refs porque sigue vacío. Credential helper y username AESRJ configurados solo en este repositorio; se utiliza el almacén seguro de GitHub CLI y no tokens en archivos del proyecto. No se eliminó la sesión de la otra cuenta ni se modificó la identidad global de Git.
+Autenticación verificada: GitHub CLI activo como AESRJ, confirmado por `gh api user`; acceso HTTPS correcto. El remoto inicialmente vacío ya recibió el avance autorizado en main: `a85a8d7ce6bdf338af76d851f90007485059860b`, con comparación local/remota correcta y sin force. Credential helper y username AESRJ configurados solo en este repositorio; se utiliza el almacén seguro de GitHub CLI y no tokens en archivos del proyecto. No se eliminó la sesión de la otra cuenta ni se modificó la identidad global de Git.
 
 ## Tecnologías y alcance confirmados
 

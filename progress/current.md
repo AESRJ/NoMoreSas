@@ -6,7 +6,7 @@ El usuario autorizó publicar este avance en AESRJ/NoMoreSas y decidió que el c
 
 **Pausa del usuario vigente para construcción.** Trabajo actual: corregir identidad/configuración de Git. Autor y committer confirmados: `AESRJ <vasquez.jorge@uabc.edu.mx>`. Los tres commits locales fueron corregidos conservando árboles, mensajes y fechas; respaldo en `.local/git-before-identity-correction.bundle`. No iniciar Claude ni construcción hasta que el usuario retome esa parte.
 
-Corrección verificada: GitHub CLI autenticado como AESRJ; origin configurado por HTTPS (`https://github.com/AESRJ/NoMoreSas.git`) con credenciales de gh y username AESRJ solo para este repositorio. `git ls-remote origin` terminó correctamente; remoto vacío, sin push.
+Corrección verificada: GitHub CLI autenticado como AESRJ; origin configurado por HTTPS (`https://github.com/AESRJ/NoMoreSas.git`) con credenciales de gh y username AESRJ solo para este repositorio. El avance se publicó por petición expresa del usuario: `a85a8d7ce6bdf338af76d851f90007485059860b` en main. HEAD local y remoto comprobados iguales; main sigue origin/main. Este cierre documental se registra después de esa publicación.
 
 ## Entorno preparado
 
@@ -27,4 +27,4 @@ Antes de construir: definir el otro repositorio, adaptar las reglas/artefactos y
 
 ## Pendientes posteriores
 
-Construcción por Claude, revisión de Codex y evidencia real de producto. Cuentas, proyectos, hardware, estimación, prompts y despliegue siguen fuera de este incremento. No se ha hecho push. Si los clientes aún no muestran MCP, recargar la sesión y aceptar la configuración de proyecto; la CLI y el servidor común están comprobados.
+Definir nombre/URL del repositorio de código y adaptar allí la entrega antes de autorizar construcción por Claude. Cuentas, proyectos, hardware, estimación, prompts y despliegue siguen fuera de este incremento. El avance del arnés ya fue subido; nuevas publicaciones requieren la autorización correspondiente. Si los clientes aún no muestran MCP, recargar la sesión y aceptar la configuración de proyecto; la CLI y el servidor común están comprobados.
