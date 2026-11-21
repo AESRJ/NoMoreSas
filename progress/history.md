@@ -135,3 +135,16 @@ GitHub Actions del incremento 969baf1 completó success: run 44856440480, https:
 Verificación final: CI del último HEAD f13e6d2 completó success (run 44856563386); API localhost sigue respondiendo status ok. Los dos checkouts quedan revisados y el código publicado conserva identidad AESRJ. El resumen final de implementación, repositorios y evidencia se sincroniza a NotebookLM; no se publican credenciales, entornos virtuales, capturas locales ni logs de ejecución.
 
 Memoria sincronizada con éxito: fuente e1ae0a7b-59d5-4a26-b462-040e469d06ab, titulada ACTUAL - codigo separado construido revisado publicado CI correcta - 2026-11-20. Contiene contexto vigente y resumen de revisión; no borra los snapshots históricos.
+
+
+## 2026-11-21 - Impeccable para Claude
+
+Codex completo la instalacion solicitada en el checkout de codigo: skill 4.10.0, revision b49177d, 65 hashes y referencias verificados, frontend precargado, descubrimiento real en nueva sesion y engine-probe 0.1.27 correctos. Sin cambios de producto. Ver docs/design-tooling.md. init.ps1 directo fue bloqueado por ExecutionPolicy; scripts/check_harness.py ejecutado con .venv paso correctamente. Sin cambios de politica del sistema. No se realizaron commits ni push en esta tarea.
+
+## 2026-11-21 - Ejecucion autonoma por tareas
+
+Usuario solicita tareas Spec Kit con commits individuales aproximadamente cada veinte minutos. Codex comprueba entrega 002 closed y T001-T017 completas en el checkout de codigo; pregunta siguiente incremento y documenta protocolo en docs/autonomous-execution.md. No reinicia launcher antiguo ni crea proceso periodico; pendiente alcance nuevo. Las restricciones de escritura del checkout hermano siguen requiriendo permiso del cliente. Sin nuevos commits o push.
+
+## 2026-11-21 - Cuentas/proyectos por tareas
+
+Usuario reanuda y autoriza cuentas/proyectos en autonomia. Codex aplica speckit-specify/plan/tasks/analyze, resuelve templates con scripts oficiales, investiga fuentes primarias, confirma Database y argon2 del runtime y prepara003 con seis tareas/contratos/ADR0005. Verificador implementation-ready retorna0; snapshot sincronizado al checkout de codigo. Claude recibe soloT001, sin commits ni push. Codex revisara por tarea. NotebookLM devolvio aprobacion requerida con policy never: continuar fuentes locales, sin eludir aprobacion. No se agregan informes de mejora visual a peticion del usuario.

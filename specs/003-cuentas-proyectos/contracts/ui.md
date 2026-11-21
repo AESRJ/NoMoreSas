@@ -1,0 +1,10 @@
+# Contrato UI
+
+- /registro y /entrar: correo/contraseña con etiquetas, mensajes españoles y autocomplete adecuado; no persistir contraseña. Sin enlaces falsos a recuperación, OAuth o correo verificado.
+- /proyectos: solo acceso autenticado, carga/vacío/error con reintento y acción crear. /proyectos/nuevo y /proyectos/:id/editar: nombre, descripción y selección de alternativas reales del catálogo, límites del modelo, guardar con botón deshabilitado durante envío, errores sin perder campos y cancelación sin guardar. /proyectos/:id: detalle y acciones editar/eliminar.
+- Layout ofrece Entrar/Crear cuenta para visitante y Mis proyectos/correo/Salir para autenticado. Conservar catálogo/comparación y funcionalidades actuales. Al registrar/entrar ir a /proyectos o a ruta interna privada validada; no redirigir a URLs externas. Catálogo continúa público.
+- Guard de rutas espera resolución de sesión para no parpadear información privada; si401 limpiar identidad y todos los datos privados cacheados. Cambiar de usuario no reutiliza proyectos de otro. Cualquier escritura usa CSRF actual vía cliente central; ante403/401 no reintentar una escritura silenciosamente: conservar valores y explicar cómo reautenticar/reintentar.
+- auth store Zustand solo en memoria con estado desconocido/cargando/autenticado/anónimo/error; no persistir tokens/sesión/contraseña. GET auth/session compartido durante carga y cancelación/respuestas obsoletas controladas. Proyectos no deben compartir caché entre identidades.
+- Borrado exige confirmación explícita con nombre del proyecto; Cancelar no llama API. Tras éxito volver a lista y anunciar resultado; tras fallo mantener detalle y permitir reintento.
+- Contenido externo como texto React, no HTML crudo. Foco visible, errores asociados a inputs, avisos anunciados, navegación por teclado a360/1280 sin desbordamiento de la página. Alternativa retirada marcada No disponible con ID; permitir quitarla/reemplazarla antes de guardar selección completa.
+- No añadir hardware, estimación, planes/prompts ni botones que simulen funciones futuras.

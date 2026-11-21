@@ -1,5 +1,9 @@
 # Contexto recuperable de NoMoreSaaS
 
+Reanudación 2026-11-21: usuario autoriza cuentas/proyectos con tareas SDD y commits individuales breves en autonomía. Entrega003 y ADR0005: SQLite local, Argon2id, sesiones persistentes y CRUD privado, sin despliegue. Seis tareas activas en .project/specs/003-cuentas-proyectos del código, rama feat/cuentas-proyectos; el maestro conserva planificación/snapshot. Claude implementa una por invocación y Codex revisa/commitea. No reutilizar launcher histórico que completa002; usar el nuevo flujo por tarea. NotebookLM no pudo consultarse por aprobación requerida/policy never.
+
+Actualización 2026-11-21: Impeccable 4.10.0 instalada en Claude del repositorio de código y precargada por frontend. Descubrimiento en sesión nueva y motor 0.1.27 comprobados. No se rediseñó el producto. Procedimiento: docs/design-tooling.md.
+
 Actualizado: 2026-11-20. Remoto: `https://github.com/AESRJ/NoMoreSas.git`. El original `NoMoreSaaS.pdf` y `docs/product/` describen la visión; el stack se confirmó directamente con el usuario en esta sesión, no se deduce del PDF.
 
 ## Reglas estables

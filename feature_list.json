@@ -1,12 +1,61 @@
 {
   "schema_version": 1,
   "features": [
-    {"id": "HARNESS-001", "title": "Montaje inicial del arnés y estructura de agentes", "status": "done", "spec_dir": null, "owner": "codex", "evidence": "docs/setup-step-by-step.md"},
-    {"id": "001-descubrimiento", "title": "Resolver alcance inicial y decisiones técnicas", "status": "done", "spec_dir": "specs/001-descubrimiento", "owner": "codex", "evidence": "docs/decisions/0002-stack-y-primer-incremento.md"},
-    {"id": "MVP-CATALOGO", "title": "Catálogo y comparación de alternativas", "status": "done", "spec_dir": "specs/002-catalogo-comparacion", "owner": "claude-code", "evidence": "progress/review_MVP-CATALOGO.md"},
-    {"id": "MVP-IDENTIDAD", "title": "Identidad y proyectos por usuario", "status": "pending", "spec_dir": null, "owner": "claude-code", "evidence": null},
-    {"id": "MVP-RECURSOS", "title": "Hardware y estimación de recursos", "status": "pending", "spec_dir": null, "owner": "claude-code", "evidence": null},
-    {"id": "MVP-PLANES", "title": "Planes, prompts por etapa y seguimiento", "status": "pending", "spec_dir": null, "owner": "claude-code", "evidence": null},
-    {"id": "MVP-VALIDACION", "title": "Compatibilidad y prevención de errores", "status": "pending", "spec_dir": null, "owner": "claude-code", "evidence": null}
+    {
+      "id": "HARNESS-001",
+      "title": "Montaje inicial del arnés y estructura de agentes",
+      "status": "done",
+      "spec_dir": null,
+      "owner": "codex",
+      "evidence": "docs/setup-step-by-step.md"
+    },
+    {
+      "id": "001-descubrimiento",
+      "title": "Resolver alcance inicial y decisiones técnicas",
+      "status": "done",
+      "spec_dir": "specs/001-descubrimiento",
+      "owner": "codex",
+      "evidence": "docs/decisions/0002-stack-y-primer-incremento.md"
+    },
+    {
+      "id": "MVP-CATALOGO",
+      "title": "Catálogo y comparación de alternativas",
+      "status": "done",
+      "spec_dir": "specs/002-catalogo-comparacion",
+      "owner": "claude-code",
+      "evidence": "progress/review_MVP-CATALOGO.md"
+    },
+    {
+      "id": "MVP-IDENTIDAD",
+      "title": "Identidad y proyectos por usuario",
+      "status": "in_progress",
+      "spec_dir": "specs/003-cuentas-proyectos",
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "MVP-RECURSOS",
+      "title": "Hardware y estimación de recursos",
+      "status": "pending",
+      "spec_dir": null,
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "MVP-PLANES",
+      "title": "Planes, prompts por etapa y seguimiento",
+      "status": "pending",
+      "spec_dir": null,
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "MVP-VALIDACION",
+      "title": "Compatibilidad y prevención de errores",
+      "status": "pending",
+      "spec_dir": null,
+      "owner": "claude-code",
+      "evidence": null
+    }
   ]
 }
