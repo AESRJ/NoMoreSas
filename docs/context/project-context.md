@@ -1,36 +1,22 @@
-# Contexto recuperable de NoMoreSaaS
+# Contexto actual de NoMoreSaaS
+Actualizado2026-11-22. MVP local especificado completo: catálogo002, identidad003 y flujo004 cerrados. No funcionalidad activa. Fuente de estado progress/current.md y feature_list.json; historial append-only progress/history.md. No ejecutar entregas cerradas.
 
-Reanudación 2026-11-21: usuario autoriza cuentas/proyectos con tareas SDD y commits individuales breves en autonomía. Entrega003 y ADR0005: SQLite local, Argon2id, sesiones persistentes y CRUD privado, sin despliegue. Seis tareas activas en .project/specs/003-cuentas-proyectos del código, rama feat/cuentas-proyectos; el maestro conserva planificación/snapshot. Claude implementa una por invocación y Codex revisa/commitea. No reutilizar launcher histórico que completa002; usar el nuevo flujo por tarea. NotebookLM no pudo consultarse por aprobación requerida/policy never.
+## Repositorios y responsabilidades
+Este maestro AESRJ/NoMoreSas conserva arnés/planificación/docs, sin código de producto. Código en AESRJ/NoMoreSaaS_Frontend, checkout C:/Users/Roel/Documents/NoMoreSaaS_Frontend, rama feat/flujo-final, HEADf5504bf. Pese al nombre es monorepo apps/web+apps/api. Tareas/evidencia operativas solo .project/ del código; specs/ de este maestro es snapshot de planificación, no lista duplicada.
+Codex planifica/revisa/documenta; Claude Code construye aplicación/pruebas. Toda corrección de producto vuelve a Claude. Identidad Git confirmada AESRJ <vasquez.jorge@uabc.edu.mx>, autor y committer, sin coautoría. Sin push salvo nueva instrucción explícita. La autorización previa permitió construcción autónoma; no autoriza autoampliar futuros alcances.
 
-Actualización 2026-11-21: Impeccable 4.10.0 instalada en Claude del repositorio de código y precargada por frontend. Descubrimiento en sesión nueva y motor 0.1.27 comprobados. No se rediseñó el producto. Procedimiento: docs/design-tooling.md.
+## Producto y stack
+React19/Vite8/ReactRouter8 declarativo/Zustand5/pnpm12.21.0, JavaScriptESM; Express5, Node26.13.1, SQLite nativo y sesiones persistentes/Argon2id. No Next/Django/ORM.
+Catálogo vigente cinco alternativas: Nextcloud→GoogleDrive, Immich→GoogleFotos, Matrix/Synapse→Slack, WireGuard→Tailscale (sin prometer paridad), Outline wiki→Notion. GitHub/Gitea/Forgejo retirados, referencias históricas preservadas. Outline BSL sourceavailable, no open source. Usuario confirmó getoutline.com.
+Recorrido: catálogo/comparación → cuenta → proyecto privado → equipo/carga → evaluación orientativa con presupuestos editoriales y fuentes oficiales separadas → plan por etapas → prompt copiable → avance persistente y versionado. Paleta solicitada negra/carbón/blancos/lima#C6FD0E; computadora central generada en MCPHiggsfield e integrada localmente. Sin SSH/instalaciones automáticas/despliegue, IAexterna obligatoria ni garantía de hardware.
 
-Actualizado: 2026-11-20. Remoto: `https://github.com/AESRJ/NoMoreSas.git`. El original `NoMoreSaaS.pdf` y `docs/product/` describen la visión; el stack se confirmó directamente con el usuario en esta sesión, no se deduce del PDF.
+## Evidencia y commits
+Entrega004 siete tareas aceptadas. Claude construyóT001–T006 y nuevas pruebas; agotó su cuota5h tras últimos ajustes de diseño. Codex consolidóT007 solo mediante revisión, pruebas y documentación, sin editar producto. Commits420aad3,58d63af,7502557,9a1d995,64b7d51,4e43294,f5504bf; tabla y evidencia progress/review_MVP-CIERRE.md.
+Lint/build,254API/169web/38e2e correctos. UIreal360/1280: imagen/paleta, clipboardreal, avance trasrecarga; APIreal conDBtemporal y reinicio conserva sesión/perfil/avance, ownership/CSRF/409 correctos. Convergencia sin brechas dentro del alcance004; no significa operación de producción o auditoríaWCAG completa. CI remota del incremento no comprobada, sin push.
 
-## Reglas estables
+## Operación local y memoria
+Preview http://127.0.0.1:5573, API3301. .env/secreto/DB/capturas ignorados. DBpreview respaldada conVACUUM INTO antesmigración002; usuarios/proyectos conservados. No borrar ni sustituir datos locales. No detener listeners ajenos. Arranque/verificación en README y .project/verification.md del código.
+NotebookLM auxiliar de contexto autenticado en Codex; consulta exitosa contrastada con brief/PDF. Cuaderno exclusivo3323fc9c-9d8c-4d11-85ba-30944415fa7f; nueva fuente de cierre1e33b13e-b304-4bf0-837f-26497586b56f procesada, las fuentes002 anteriores son históricas. Higgsfield conectado en Claude tras aprobación/autenticación del usuario; generaciónúnica/jobade277e0-1c97-4ed2-9256-26620b81639d, modelo gpt_image_2_6, PNGlocal validado. No secretos enGit/memoria. Impeccable disponible enClaude; usuario pidió no crear documentos de su mejora.
 
-Codex planifica y revisa; Claude Code construye. SDD con GitHub Spec Kit 1.4.3. Una funcionalidad activa, tareas/entregas persistentes y evidencia real antes de cerrar. Git conserva la autoridad; NotebookLM es memoria auxiliar con fuentes. No secretos en Git ni memoria. No push sin solicitud explícita.
-
-Identidad Git confirmada por el usuario: **AESRJ <vasquez.jorge@uabc.edu.mx>** para autor y committer. Se corrigió la atribución errónea de los tres commits locales sin cambiar sus árboles, mensajes o fechas. No inferir autoría desde cuentas conectadas a otras herramientas. La pausa posterior quedó revocada cuando el usuario proporcionó el repositorio de código y autorizó iniciar construcción allí (ADR 0004).
-
-Autenticación verificada: GitHub CLI activo como AESRJ, confirmado por `gh api user`; acceso HTTPS correcto. El remoto inicialmente vacío ya recibió el avance autorizado en main: `a85a8d7ce6bdf338af76d851f90007485059860b`, con comparación local/remota correcta y sin force. Credential helper y username AESRJ configurados solo en este repositorio; se utiliza el almacén seguro de GitHub CLI y no tokens en archivos del proyecto. No se eliminó la sesión de la otra cuenta ni se modificó la identidad global de Git.
-
-## Tecnologías y alcance confirmados
-
-Frontend: React, React Router, Zustand y pnpm, por tecnologías usadas en clase. Backend: Node.js con Express, elegido por el usuario. Plan de Codex: Vite, JavaScript ESM y workspace `apps/web` + `apps/api`. No Next.js ni Django. Primer incremento público: catálogo, búsqueda, ficha y comparación; catálogo JSON curado servido por API de lectura, sin cuentas ni base de datos todavía.
-
-## Estado técnico comprobado
-
-Claude Code 2.1.329 instalado/autenticado, Node LTS 26.13.1 y pnpm 12.21.0 instalados; ejecutar desde terminal nueva para recoger PATH. NotebookLM MCP CLI 0.16.5 en `.venv`, perfil protegido autenticado, cuaderno exclusivo **NoMoreSaaS - contexto de desarrollo**. PDF y AGENTS cargados; consulta con citas y prueba MCP stdio de notebook_get correctas. ID local en `.local/notebooklm.json`. Comprobación nativa: Codex reconoce el servidor habilitado; Claude reconoce la configuración de proyecto pero requiere aprobación inicial al ejecutar `claude`. No se ha dado esa aprobación por el usuario ni se afirma que Claude ya haya usado el servidor. No hay sincronización automática.
-
-## Punto de reanudación
-
-Destino confirmado: AESRJ/NoMoreSaaS_Frontend, checkout `C:/Users/Roel/Documents/NoMoreSaaS_Frontend`. El arnés permanece aquí. El usuario autorizó construcción y trabajo automático; Codex preparó infraestructura, Claude implementó T001–T017 y Codex revisó e integró/publicó. MVP-CATALOGO done tras lint, 80 pruebas API, 56 frontend, build y 22 e2e correctas y capturas examinadas. CI del incremento 969baf1 aprobada en GitHub (run 44856440480). Entrega del código closed. Snapshot SDD, tareas y evidencia activos en .project/ del código; apps/web y apps/api separadas. feat/catalogo-comparacion integrada fast-forward en main; HEAD publicado f13e6d2b8b3167f53781e96ebc9e544e28284dae, local/remoto coincidentes. Preview http://127.0.0.1:5173 y API 3001. No crear producto aquí. Próxima funcionalidad necesita nueva especificación; ver progress/review_MVP-CATALOGO.md y ADR 0004. No hay despliegue de producción.
-
-Los valores de diseño de catálogo/comparación se identifican como supuestos de Codex. Los datos candidatos requieren curación real por Claude. No prometer recursos de hardware a partir de ejemplos del PDF. Q04–Q08 corresponden a incrementos posteriores y no bloquean este catálogo público.
-
-CI final de f13e6d2 confirmada success en run 44856563386. El catálogo inicial fue curado por Claude y revisado en el alcance descrito en los informes; las candidatas no revisadas de futuras ampliaciones siguen necesitando verificación. La API local respondió status ok después de publicar. El usuario prefiere ejecución automática de trabajo autorizado, manteniendo las aprobaciones impuestas por la plataforma y sin ampliar funciones por inferencia.
-
-
-## Cierre003 - 2026-11-22
-
-MVP-IDENTIDAD done, entrega003closed. Seis tareas ejecutadas por Claude y revisadas por Codex, commits por tarea. Evidencia review_MVP-IDENTIDAD.md:213API,150web,30e2e,lint/build, clon sin puntero y reinicio realAPI. Preview5573/API3301, sin push. La siguiente funcionalidad requiere nueva planificacion; no ejecutar entrega cerrada ni autoiniciar hardware/prompts.
+## Próximo trabajo
+Usuario revisa el flujo final y prioriza mejoras. Una nueva funcionalidad requiere specify→clarify→plan→tasks→analyze→handoffready antes de delegar construcción. Mantener separación Codex/Claude, una featureinprogress máximo y un escritor por archivo. El detalle histórico permanece enGit/progress/history.md.

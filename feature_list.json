@@ -36,34 +36,34 @@
     {
       "id": "MVP-RECURSOS",
       "title": "Hardware y estimación de recursos",
-      "status": "pending",
-      "spec_dir": null,
+      "status": "done",
+      "spec_dir": "specs/004-flujo-final",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_MVP-CIERRE.md"
     },
     {
       "id": "MVP-PLANES",
       "title": "Planes, prompts por etapa y seguimiento",
-      "status": "pending",
-      "spec_dir": null,
+      "status": "done",
+      "spec_dir": "specs/004-flujo-final",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_MVP-CIERRE.md"
     },
     {
       "id": "MVP-VALIDACION",
       "title": "Compatibilidad y prevención de errores",
-      "status": "pending",
-      "spec_dir": null,
+      "status": "done",
+      "spec_dir": "specs/004-flujo-final",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_MVP-CIERRE.md"
     },
     {
       "id": "MVP-CIERRE",
       "title": "Flujo final: catálogo, recursos, planes y seguimiento",
-      "status": "in_progress",
+      "status": "done",
       "spec_dir": "specs/004-flujo-final",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_MVP-CIERRE.md"
     }
   ]
 }

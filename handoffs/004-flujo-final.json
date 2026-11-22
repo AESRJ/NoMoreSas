@@ -1,6 +1,6 @@
 {
   "feature_id": "MVP-CIERRE",
-  "status": "ready",
+  "status": "closed",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/004-flujo-final",
@@ -35,12 +35,14 @@
     "init.cmd"
   ],
   "blockers": [],
-  "external_dependencies": [
-    "Higgsfield image: project MCP requires client approval then OAuth; continue independent work, do not claim asset complete"
-  ],
+  "external_dependencies": [],
   "implementation_report": "progress/impl_MVP-CIERRE.md",
   "review_report": "progress/review_MVP-CIERRE.md",
   "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
   "execution_mode": "one task per Claude invocation; Codex review and commit; no push",
-  "commit_interval_minutes": 20
+  "commit_interval_minutes": null,
+  "commit_cadence": "one reviewed task per commit; prioritize completion without artificial waits per latest user request",
+  "review_result": "accepted by Codex; lint/build,254API,169web,38e2e; real UI clipboard/persistence and API restart verified",
+  "reviewed_at": "2026-11-22T18:14:39.172143+00:00",
+  "final_review_note": "Claude built all product code and new tests T001–T006; Codex consolidated T007 review/documentation only after Claude quota was exhausted"
 }

@@ -1,28 +1,14 @@
-# Rumbo y alcance pendiente
+# Estado del MVP — 2026-11-22
+El recorrido local acordado está completo y revisado. Entrega004:7/7tareas aceptadas. La estimación anterior21–29tareas era preliminar y fue sustituida por siete entregas sustanciales enSDD004, sin mantener dos listas activas.
 
-Revisión: 2026-11-22. Fuentes: brief.md, feature_list.json y tareas operativas del repositorio de código. Esta es una orientación de alcance, no una entrega de implementación ni una nueva lista de tareas activa.
+| Bloque | Estado | Resultado |
+|---|---|---|
+| Catálogo/comparación | Completo | Cinco alternativas curadas; se conservaGoogle y se retiraGitHub |
+| Cuentas/proyectos | Completo | Sesión persistente y proyectos privados |
+| Hardware/recursos | Completo enMVP | Perfil declarado y cálculo editorial con fuentes/márgenes |
+| Compatibilidad | Completo enMVP | Insuficiencia, desconocidos y condiciones de plataforma/red/auth |
+| Planes/prompts/avance | Completo enMVP | Etapas guiadas, copia y seguimiento privado versionado |
+| Presentación solicitada | Completo | Paleta negra/lima e imagen realHiggsfield |
 
-El objetivo del MVP es ayudar a pasar de un SaaS a una alternativa autoalojable: elegirla, crear un proyecto, declarar hardware y necesidades, obtener una estimación con fuentes y supuestos, seguir un plan de instalación, copiar prompts por etapa y guardar el avance. El catálogo y las cuentas constituyen la base; el recorrido guiado todavía está pendiente.
-
-## Estado comprobado
-
-- Catálogo, búsqueda, fichas y comparación: 17 tareas completadas.
-- Cuentas y proyectos privados con alternativas: 6 tareas completadas.
-- Total de implementación: 23 tareas cerradas, ninguna pendiente en esas dos entregas. No incluye tareas de montaje del arnés.
-- El índice conserva tres bloques funcionales pendientes, aún sin especificaciones ni tasks.md: recursos, planes y validación. No hay un total oficial de tareas restantes ni un porcentaje global medido.
-
-## Estimación preliminar para cerrar el MVP
-
-| Trabajo pendiente | Tareas estimadas |
-| --- | --- |
-| Hardware, necesidades de uso y estimación con supuestos y fuentes | 6–8 |
-| Planes, prompts por etapa y seguimiento persistente | 8–10 |
-| Compatibilidad y prevención de errores | 4–6 |
-| Integración del recorrido completo, pruebas de aceptación y documentación de cierre | 3–5 |
-| Total orientativo | 21–29 |
-
-Estos rangos no son tareas aprobadas ni nuevos compromisos. Se revisarán al completar specify, clarify, plan y tasks de cada incremento. El cierre transversal contempla el recorrido completo cuando existan los módulos; no sustituye las pruebas particulares de cada uno.
-
-Siguen por resolver fuentes y márgenes de estimación, sistemas soportados y si los prompts serán plantillas o usarán un modelo externo. La estimación corresponde al MVP funcional local; producción, recuperación/verificación de correo y mejoras operativas requieren alcance adicional. SSH, ejecución remota, monitoreo, backups ejecutables y comunidad permanecen como futuro separado según el brief.
-
-Orden de dependencia propuesto: recursos → planes/prompts/avance → validación integrada → aceptación final. Ninguno se ha iniciado por esta consulta.
+Evidencia progress/review_MVP-CIERRE.md y .project/ del código. Preview5573/API3301; siete commits separados por tarea, sin push/despliegue. Revisión final:254API/169web/38e2e,lint/build y escenarios reales360/1280 correctos.
+El cierre se refiere al MVP local para revisar mejoras. Producción, correo/recuperación/borrado de cuenta, instalación remota, SSH, monitoreo y automatización de servidores requieren priorización y nueva especificación. No son tareas pendientes encubiertas de004.
