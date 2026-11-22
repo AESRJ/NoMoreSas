@@ -21,8 +21,8 @@ Identidad Git AESRJ <vasquez.jorge@uabc.edu.mx>, local a cada repo. Claude auten
 
 ## Siguiente acción
 
-Usuario reanudó ejecución autónoma y autorizó cuentas/proyectos. Spec, plan, modelo, contratos, seis tareas y análisis en specs/003-cuentas-proyectos. Entrega efectiva ready en .project/handoffs/003-cuentas-proyectos.json del código; tareas activas solo allí. T001 asignada a Claude en feat/cuentas-proyectos. Revisar antes de cada commit; cadencia aproximada20min entre commits de implementación, sin push. No hay programador periódico externo: ejecución supervisada en esta sesión.
+Usuario reanudó ejecución autónoma y autorizó cuentas/proyectos. Spec, plan, modelo, contratos, seis tareas y análisis en specs/003-cuentas-proyectos. Entrega efectiva ready en .project/handoffs/003-cuentas-proyectos.json del código; tareas activas solo allí. T001 aceptada/593cc78, T002 aceptada/65bc860 y T003 aceptada/b6bbbf2 tras revisión independiente (170API+108web+22e2e, lint/build y recorrido real de acceso360/1280). T004 asignada a Claude en feat/cuentas-proyectos. Revisar antes de cada commit; cadencia aproximada20min entre commits de implementación, sin push. No hay programador periódico externo: ejecución supervisada en esta sesión.
 
-Impeccable 4.10.0 instalada y comprobada en Claude del repositorio de código el 2026-11-21. Frontend la precarga; una sesión nueva la detectó y el motor 0.1.27 respondió correctamente. Ver docs/design-tooling.md. No se ejecutó rediseño ni se inició otra funcionalidad.
+Impeccable 4.10.0 instalada y comprobada en Claude del repositorio de código el 2026-11-21. Frontend la precarga; una sesión nueva la detectó y el motor 0.1.27 respondió correctamente. Ver docs/design-tooling.md para instalación.
 
-Preparar la siguiente funcionalidad mediante SDD cuando el usuario la priorice. Las correcciones de producto vuelven a Claude. Mantener código en el checkout separado y tareas activas allí, sin duplicar listas. La autorización automática se aplica al alcance solicitado, no incorpora cuentas, hardware, estimaciones o despliegues por inferencia.
+Continuar T001–T006 de003 en orden y revisar cada tarea antes del commit. Las correcciones de producto vuelven a Claude. Mantener código y checkboxes activos en el checkout separado. La autorización no incorpora hardware, estimaciones, prompts o despliegues por inferencia.

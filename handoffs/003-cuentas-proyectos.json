@@ -26,7 +26,8 @@
     ".project/progress",
     ".project/context.md",
     ".project/verification.md",
-    ".project/specs/003-cuentas-proyectos/tasks.md"
+    ".project/specs/003-cuentas-proyectos/tasks.md",
+    "tools/check_handoff.py"
   ],
   "verification_commands": [
     "pnpm lint",

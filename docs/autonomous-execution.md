@@ -6,7 +6,7 @@ Solicitud del usuario: 2026-11-21. Ejecutar tareas de Spec Kit en autonomía y h
 
 La entrega `.project/handoffs/002-catalogo-comparacion.json` del repositorio de código está closed. T001–T017 están completadas en su tasks.md vigente. Los checkboxes del snapshot maestro no son una cola pendiente. No volver a ejecutar la entrega cerrada ni desmarcar tareas para simular avance.
 
-Antes de arrancar otra implementación, Codex prepara spec, plan, tasks, análisis y entrega ready para el incremento elegido por el usuario. La pregunta pendiente es si continuar con diseño del catálogo usando Impeccable o con cuentas y proyectos. No elegir nuevas funciones por inferencia.
+El usuario autorizó cuentas y proyectos; Codex preparó spec, plan, tasks, análisis y entrega003 ready. Son seis tareas secuenciales, con checkboxes/evidencia activos en el repositorio de código. No elegir otras funciones por inferencia.
 
 ## Ciclo de ejecución
 
@@ -16,6 +16,8 @@ Antes de arrancar otra implementación, Codex prepara spec, plan, tasks, anális
 4. Tras aceptación, crear un commit por tarea, indicando su ID, resultado y comprobaciones, sin coautoría automática. Incluir solamente sus archivos y evidencia. Si una tarea consiste en pruebas que deben fallar antes de otra tarea, distinguir ese resultado esperado de una regresión accidental y documentarlo antes del commit.
 5. Procurar una separación aproximada de veinte minutos entre commits. Nunca fraccionar una tarea por el reloj, inventar fechas ni hacer commits vacíos. Si una tarea requiere más tiempo, terminar y verificar antes del commit. Si termina antes y todavía falta el intervalo, esperar de forma interrumpible antes del siguiente commit.
 6. Persistir tarea actual, último commit, hora real y siguiente paso. Reanudar desde esa evidencia si se interrumpe la sesión. Terminar al agotar la cola ready o ante un bloqueo externo; no crear otra funcionalidad automáticamente.
+
+Para aprovechar el intervalo, una tarea ya aceptada puede dejarse preparada en el índice con su árbol Git y commit base registrados. Se avanza entonces a la siguiente tarea sin tocar el índice. Al llegar la hora, Codex comprueba que árbol y base no cambiaron y crea el commit exclusivamente de la instantánea revisada. Las nuevas modificaciones permanecen fuera de ese commit. Solo puede existir una instantánea pendiente; si cambia el índice o la base, detener ese commit y revisar la diferencia. Esto conserva un commit por tarea sin mezclar trabajo ni alterar fechas.
 
 ## Permisos y continuidad
 
