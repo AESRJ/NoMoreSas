@@ -1,0 +1,8 @@
+GET /api/auth/providers→{google:{enabled:boolean}} sin secretos ni IDs sensibles.
+POST /api/auth/google/start body{} CSRF/Origin válidos→200{authorizationUrl}; configausente503AUTH_PROVIDER_UNAVAILABLE. Presesión persistente, URLsolo hostautorizadoGoogle conclientId/state/nonce/challengeS256/scopesmínimos.
+GET /api/auth/google/callback?state&code (oerror) valida intento de la misma sesión/unuso/5min, consume, canjea en servidor, verifica firma/iss/aud/expiry y nonce. Éxito regenera sesióny redirige303 /proyectos o /cuenta; errorredirige303 /entrar?reason=códigoaprobado o /cuenta?reason=... sin códigos/tokens/mensajesGoogle sinfiltrar. Sin sesiónGoogle inválida no crearusuario.
+POST /api/account/google/link/start body{password} requiere auth,CSRF,Origin y reautenticación credenciallocalactual→URL con purpose=link expectedUserId; rate-limit y error genérico de password. /cuenta UI informa vínculo, sin almacenarGoogle tokens. SiGoogleyausuarioajeno→409sinrelink. UsuarioGoogle-only no necesita registrarpassword paraentrarGoogle; loginlocal conservaerrorgenérico.
+CuentaGoogle ya vinculada encuentraUUIDpor(provider,sub), no porcorreo. Altainicialemailverifiedtrue, correoocupado→noautovincular e instrucciónentrarmétodolocal/vincular. No sesiones enlocalStorage.
+Migración003 aplicada porCLIhabitual y arranque008; respaldoantes, no tocar BDpreview sin operaciónrevisada. Fixtures/APIde003 deben seguir sin pérdida de proyectos ni hashes.
+
+Un solo uso debe comprobarse en tabla oauth_attempts con DELETE RETURNING y hash de sesión antes del canje; limpiar expirados. No confiar en dos copias concurrentes de sessionJSON para consumir un intento.

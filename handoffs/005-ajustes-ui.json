@@ -1,0 +1,41 @@
+{
+  "feature_id": "UX-REVISION",
+  "status": "ready",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/005-ajustes-ui",
+  "task_ids": [
+    "T001",
+    "T002",
+    "T003",
+    "T004"
+  ],
+  "allowed_paths": [
+    "apps/web",
+    "apps/api/data/catalog.json",
+    "apps/api/src/catalog.js",
+    "apps/api/tests/catalog.test.js",
+    "tests/e2e",
+    "README.md",
+    ".project/context.md",
+    ".project/verification.md",
+    ".project/progress",
+    ".project/specs/005-ajustes-ui/tasks.md"
+  ],
+  "verification_commands": [
+    "pnpm lint",
+    "pnpm build",
+    "focused tests from tasks and quickstart",
+    "browser smoke360/1280",
+    "init.cmd"
+  ],
+  "blockers": [],
+  "implementation_report": "progress/impl_UX-REVISION.md",
+  "review_report": "progress/review_UX-REVISION.md",
+  "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
+  "execution_mode": "one task per Claude invocation; Codex independent review and commit; no push by Claude",
+  "commit_interval_minutes": 20,
+  "activation_dependencies": [],
+  "external_dependencies": [],
+  "prepared_at": "2026-11-22"
+}

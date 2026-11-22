@@ -64,6 +64,38 @@
       "spec_dir": "specs/004-flujo-final",
       "owner": "claude-code",
       "evidence": "progress/review_MVP-CIERRE.md"
+    },
+    {
+      "id": "UX-REVISION",
+      "title": "Revisión de interfaz: árbol de servicios y comparativa integrada",
+      "status": "in_progress",
+      "spec_dir": "specs/005-ajustes-ui",
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "AUTH-GOOGLE",
+      "title": "Acceso con Google",
+      "status": "pending",
+      "spec_dir": "specs/006-acceso-google",
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "MVP-EQUIPO-ASISTIDO",
+      "title": "Equipo detectado o importado y planes claros con seguridad",
+      "status": "pending",
+      "spec_dir": "specs/007-equipo-y-plan-seguro",
+      "owner": "claude-code",
+      "evidence": null
+    },
+    {
+      "id": "DEPLOY-RAILWAY",
+      "title": "Preparación de producción y despliegue inicialRailway",
+      "status": "pending",
+      "spec_dir": "specs/008-preparacion-railway",
+      "owner": "claude-code",
+      "evidence": null
     }
   ]
 }

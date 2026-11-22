@@ -43,3 +43,8 @@ Identidad confirmada explícitamente por el usuario: **AESRJ <vasquez.jorge@uabc
 - Operación SDD y entregas: `docs/workflow.md`, `handoffs/README.md`.
 - Memoria: `docs/notebooklm.md`, `docs/context/`.
 - Validación: `docs/verification.md`.
+
+
+## Actualización autorizada: revisión y Railway (2026-11-22)
+El usuario pidió explícitamente implementar los últimos cambios y desplegar el código en Railway. La excepción a la restricción anterior de despliegue cubre únicamente esta aplicación revisada (008/ADR0010); no SSH ni instalaciones de los servicios de proyectos de usuarios, compras o ampliación de gasto sin límite aprobado. No inferir un push a GitHub.
+005 es la entrega ready actual;006–008 están planificadas en cola y Codex puede activarlas tras revisión de dependencias. Una funcionalidad in_progress como máximo. Codex mantiene planificación/revisión/operación y Claude construye producto, Docker y pruebas. Commit por tarea revisada aproximadamente cada veinte minutos, como el usuario recordó; no volver a relajar la cadencia por inferencia. Reanudación local programada solo se afirma después de verificarla, sujeta a equipo disponible, autenticación y cuota reales.

@@ -1,0 +1,3 @@
+# Revisión de consistencia 006-acceso-google
+2026-11-22, Codex. check-prerequisites RequireSpec/RequireTasks/IncludeTasks correcto; sinhooksregistrados. Revisados spec/plan/tasks/modelo/contrato/constitución. 7FR, 3SC, 5tareas. Alcance/historias/migración y fuentescoherentes; todasFR/SC cubiertas por tareas; camposcanónicos resueltos por citas deentidad/campo en tareas. Sincríticos/altospendientes; dependenciasexternas y orden serial explícitos.
+No implementado ni verificado aún. Auth/Googlelive y despliegue requieren credenciales/acceso/costos reales, nunca aceptaciónporfixtures. Ver quickstart y contrato parareleasegates. Análisis no modificó lista de tareas.

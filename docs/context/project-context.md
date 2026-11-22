@@ -1,3 +1,13 @@
+# Estado vigente — revisión y Railway
+
+Actualizado el 22 de noviembre de 2026. La entrega 004 está cerrada y es la base de producto f5504bf. El usuario autorizó implementar sus últimos cambios y desplegar esta aplicación en Railway. Hay 16 tareas planificadas: 005 interfaz (4), 006 Google (5), 007 equipo y seguridad (4), 008 producción y Railway (3). Solo 005 está activa y ready; las siguientes requieren activación de Codex tras revisar dependencias. Todavía no se implementaron estos cambios de producto.
+
+El código vive en C:/Users/Roel/Documents/NoMoreSaaS_Frontend, rama feat/revision-y-railway. La lista operativa está en .project/execution-queue.json y los checkboxes solo en .project/specs/. Codex planifica y revisa; Claude construye. Commits por tarea revisada, aproximadamente cada veinte minutos, con AESRJ <vasquez.jorge@uabc.edu.mx>. Preservar datos y modificaciones previas. Sin push inferido ni compras o ampliación de gasto.
+
+Último aviso de cuota de Claude: restablecimiento a las 14:20, America/Tijuana. Se prepara un reintento a las 14:21; consultar el registro local de programación antes de afirmar que está armado. Google requiere registro de cliente OAuth y variables protegidas; guía docs/setup-google.md en el maestro, .project/docs/setup-google.md en el código. El usuario confirmó Railway conectado, pero aún no se verificaron herramientas operativas, cuenta ni costos. La construcción independiente continúa; publicar requiere resolver esos puntos.
+
+## Contexto de la entrega anterior (histórico)
+
 # Contexto actual de NoMoreSaaS
 Actualizado2026-11-22. MVP local especificado completo: catálogo002, identidad003 y flujo004 cerrados. No funcionalidad activa. Fuente de estado progress/current.md y feature_list.json; historial append-only progress/history.md. No ejecutar entregas cerradas.
 

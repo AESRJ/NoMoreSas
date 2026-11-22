@@ -1,0 +1,48 @@
+{
+  "feature_id": "AUTH-GOOGLE",
+  "status": "draft",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/006-acceso-google",
+  "task_ids": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005"
+  ],
+  "allowed_paths": [
+    "apps/api",
+    "apps/web",
+    "tests/e2e",
+    "package.json",
+    "pnpm-lock.yaml",
+    ".env.example",
+    "README.md",
+    ".project/docs/setup-google.md",
+    ".project/context.md",
+    ".project/verification.md",
+    ".project/progress",
+    ".project/specs/006-acceso-google/tasks.md"
+  ],
+  "verification_commands": [
+    "pnpm lint",
+    "pnpm build",
+    "focused tests from tasks and quickstart",
+    "browser smoke360/1280",
+    "init.cmd"
+  ],
+  "blockers": [],
+  "implementation_report": "progress/impl_AUTH-GOOGLE.md",
+  "review_report": "progress/review_AUTH-GOOGLE.md",
+  "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
+  "execution_mode": "one task per Claude invocation; Codex independent review and commit; no push by Claude",
+  "commit_interval_minutes": 20,
+  "activation_dependencies": [
+    "UX-REVISION code reviewed"
+  ],
+  "external_dependencies": [
+    "GoogleOAuth client/consent/redirect and live verification pending"
+  ],
+  "prepared_at": "2026-11-22"
+}
