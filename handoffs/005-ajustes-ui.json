@@ -20,7 +20,8 @@
     ".project/context.md",
     ".project/verification.md",
     ".project/progress",
-    ".project/specs/005-ajustes-ui/tasks.md"
+    ".project/specs/005-ajustes-ui/tasks.md",
+    "apps/api/tests/db.test.js"
   ],
   "verification_commands": [
     "pnpm lint",

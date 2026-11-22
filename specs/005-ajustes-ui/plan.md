@@ -25,3 +25,6 @@ Ver quickstart.md y tareas por riesgo. Pruebas enfocadas por tarea, lint/build y
 
 ## Complexity Tracking
 Solo dependencias y tablasjustificadas; detalles delalcance/valores de modelo canónicos se citan desde tasks. Documentar asistencia/comandos brevemente, sinrazonamiento interno ni secretos.
+
+## Ajuste de verificación T004 — 2026-11-22
+API263/263PASS sin paralelismo y db28/28PASS aislado; pnpm test paralelo repite timeout5s creando100proyectos con commitsSQLiteFULL individuales. Autorizar solo estabilizar preparación de fixtures de esa prueba en apps/api/tests/db.test.js, manteniendo límite100, rechazo101, segunda cuenta y aserciones. Claude decide implementación mínima; no aumentar límites/timeout global ni cambiar producto/DBreal. RevisiónCodex antes de aceptar, pnpm test integradoPASS requerido.

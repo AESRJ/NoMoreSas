@@ -13,7 +13,7 @@ Meta: las historias de spec.md y criterios observables de quickstart.md.
 
 - [ ] T003 [US3] Implementar ServiceReplacementPicker y usarlo en ProjectFormPage para crear/editar por servicio conocido, chips/quitar y retiradas. data-model.md ProjectSelection.alternativeIds; persistencia003 intacta. FR005. Verificar dos servicios, duplicados/quitar, edición/reintento/401 y aislamiento existente.
 
-- [ ] T004 [US4] Integrar y corregir regresiones005 dentro de alcance; actualizar pruebas viejas del recorrido global obsoleto conservando intención de búsqueda/selección/privacidad. README/contexto/evidencia breves .project/progress/impl_UX-REVISION.md. FR001–007/SC001–003. Lint/build, tests afectados y smoke navegador360/1280; Codex revisa/cierra, no Claude.
+- [ ] T004 [US4] Integrar y corregir regresiones005 dentro de alcance; actualizar pruebas viejas del recorrido global obsoleto conservando intención de búsqueda/selección/privacidad. README/contexto/evidencia breves .project/progress/impl_UX-REVISION.md. FR001–007/SC001–003. Lint/build, tests afectados y smoke navegador360/1280; Codex revisa/cierra, no Claude. Ajuste Codex2026-11-22: estabilizar únicamente fixtures de apps/api/tests/db.test.js para la prueba de cuota100 que agota5s bajo carga; conservar aserciones/semántica/aislamiento y verificar pnpm test integrado, sin cambiar configuraciónDB ni límites de producto.
 
 ## Phase4 Polish y cierre
 Laúltima tarea incluyeintegración/checks/evidencia; Codex cierra sólo tras verificación, sin nuevos cambios de producto por Codex.
