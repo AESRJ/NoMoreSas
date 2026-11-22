@@ -1,6 +1,6 @@
 {
   "feature_id": "UX-REVISION",
-  "status": "ready",
+  "status": "closed",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/005-ajustes-ui",
@@ -38,5 +38,8 @@
   "commit_interval_minutes": 20,
   "activation_dependencies": [],
   "external_dependencies": [],
-  "prepared_at": "2026-11-22"
+  "prepared_at": "2026-11-22",
+  "code_reviewed": true,
+  "reviewed_at": "2026-11-22",
+  "commit_status": "T001-T003 committed; T004 reviewed snapshot frozen, waiting20min"
 }

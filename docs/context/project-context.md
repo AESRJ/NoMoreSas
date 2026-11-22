@@ -1,10 +1,8 @@
-# Estado vigente — revisión y Railway
+# Estado vigente — acceso Google
 
-Actualizado el 22 de noviembre de 2026. La entrega 004 está cerrada y es la base de producto f5504bf. El usuario autorizó implementar sus últimos cambios y desplegar esta aplicación en Railway. Hay 16 tareas planificadas: 005 interfaz (4), 006 Google (5), 007 equipo y seguridad (4), 008 producción y Railway (3). Solo 005 está activa y ready; las siguientes requieren activación de Codex tras revisar dependencias. Todavía no se implementaron estos cambios de producto.
+Actualizado2026-11-22 15:05.005 está revisada/cerrada en su alcance de código: T001a73e628, T002c3ab411 y T0032adea045 confirmados; T004 tiene snapshot congelado, con helper39340 esperando hasta~15:25.006 es la única activa/ready, con T001–T005 pendientes;007/008 siguen draft. Codex planifica/revisa/documenta/opera, Claude construye producto/pruebas/Docker. Una feature activa, una tarea por invocación y commits cada20min; sin push inferido. Ejecución y checkboxes solo en .project del código separado.
 
-El código vive en C:/Users/Roel/Documents/NoMoreSaaS_Frontend, rama feat/revision-y-railway. La lista operativa está en .project/execution-queue.json y los checkboxes solo en .project/specs/. Codex planifica y revisa; Claude construye. Commits por tarea revisada, aproximadamente cada veinte minutos, con AESRJ <vasquez.jorge@uabc.edu.mx>. Preservar datos y modificaciones previas. Sin push inferido ni compras o ampliación de gasto.
-
-Último aviso de cuota de Claude: restablecimiento a las 14:20, America/Tijuana. Se prepara un reintento a las 14:21; consultar el registro local de programación antes de afirmar que está armado. Google requiere registro de cliente OAuth y variables protegidas; guía docs/setup-google.md en el maestro, .project/docs/setup-google.md en el código. El usuario confirmó Railway conectado, pero aún no se verificaron herramientas operativas, cuenta ni costos. La construcción independiente continúa; publicar requiere resolver esos puntos.
+005 pasó lint/build/API263/web164; Claude48e2e finales y Codex portada4 tras reparar la espera de color. Convergencia sin brechas. Google requiere cliente, variables y prueba viva. Railway: el descubrimiento actual informa que no está instalado en esta sesión; acceso operativo/costos sin verificar. DockerCLI no está enPATH. Sin publicación. NotebookLM fuente57f2e1ff ready con estado parcial14:55; Git manda. Datos, preview y herramientas previas conservados.
 
 ## Contexto de la entrega anterior (histórico)
 

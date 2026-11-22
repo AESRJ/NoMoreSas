@@ -1,6 +1,6 @@
 {
   "feature_id": "AUTH-GOOGLE",
-  "status": "draft",
+  "status": "ready",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/006-acceso-google",
@@ -44,5 +44,7 @@
   "external_dependencies": [
     "GoogleOAuth client/consent/redirect and live verification pending"
   ],
-  "prepared_at": "2026-11-22"
+  "prepared_at": "2026-11-22",
+  "activated_at": "2026-11-22",
+  "activation_evidence": "UX-REVISION code reviewed; review_UX-REVISION.md; frozen005/T004; liveGoogle gate still pending"
 }

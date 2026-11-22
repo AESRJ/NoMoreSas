@@ -68,18 +68,20 @@
     {
       "id": "UX-REVISION",
       "title": "Revisión de interfaz: árbol de servicios y comparativa integrada",
-      "status": "in_progress",
+      "status": "done",
       "spec_dir": "specs/005-ajustes-ui",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_UX-REVISION.md",
+      "code_reviewed": true
     },
     {
       "id": "AUTH-GOOGLE",
       "title": "Acceso con Google",
-      "status": "pending",
+      "status": "in_progress",
       "spec_dir": "specs/006-acceso-google",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": null,
+      "code_reviewed": false
     },
     {
       "id": "MVP-EQUIPO-ASISTIDO",
