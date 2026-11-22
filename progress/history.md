@@ -148,3 +148,9 @@ Usuario solicita tareas Spec Kit con commits individuales aproximadamente cada v
 ## 2026-11-21 - Cuentas/proyectos por tareas
 
 Usuario reanuda y autoriza cuentas/proyectos en autonomia. Codex aplica speckit-specify/plan/tasks/analyze, resuelve templates con scripts oficiales, investiga fuentes primarias, confirma Database y argon2 del runtime y prepara003 con seis tareas/contratos/ADR0005. Verificador implementation-ready retorna0; snapshot sincronizado al checkout de codigo. Claude recibe soloT001, sin commits ni push. Codex revisara por tarea. NotebookLM devolvio aprobacion requerida con policy never: continuar fuentes locales, sin eludir aprobacion. No se agregan informes de mejora visual a peticion del usuario.
+
+## 2026-11-22 - Revision y cierre003 por Codex
+
+T001-T006 aceptadas tras revision independiente:lint,213API,150web,build y30e2e correctos, verificador actual/clon limpio y reinicio realAPI a360/1280. Entrega003closed; MVP-IDENTIDADdone. Cuota deClaude restablecida y correcciones terminadas; sin sustituirconstructor ni publicar. Evidencia:review_MVP-IDENTIDAD.md.
+
+Cierre Git: seis commits individuales de aplicacion, HEAD c8123253571d51d7fed72661c9b6cf3c309cdad7 en feat/cuentas-proyectos. Autor y committer AESRJ verificados; sin push. El indice y los cambios anteriores de instalacion se preservaron separados.

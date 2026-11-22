@@ -28,10 +28,10 @@
     {
       "id": "MVP-IDENTIDAD",
       "title": "Identidad y proyectos por usuario",
-      "status": "in_progress",
+      "status": "done",
       "spec_dir": "specs/003-cuentas-proyectos",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "progress/review_MVP-IDENTIDAD.md"
     },
     {
       "id": "MVP-RECURSOS",
