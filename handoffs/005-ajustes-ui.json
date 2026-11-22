@@ -41,5 +41,6 @@
   "prepared_at": "2026-11-22",
   "code_reviewed": true,
   "reviewed_at": "2026-11-22",
-  "commit_status": "T001-T003 committed; T004 reviewed snapshot frozen, waiting20min"
+  "commit_status": "All four reviewed task commits verified",
+  "reviewed_commit": "ddd3bac9dfb4490fb3ffa81babf9e652cb5ee41f"
 }
