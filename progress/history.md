@@ -154,3 +154,10 @@ Usuario reanuda y autoriza cuentas/proyectos en autonomia. Codex aplica speckit-
 T001-T006 aceptadas tras revision independiente:lint,213API,150web,build y30e2e correctos, verificador actual/clon limpio y reinicio realAPI a360/1280. Entrega003closed; MVP-IDENTIDADdone. Cuota deClaude restablecida y correcciones terminadas; sin sustituirconstructor ni publicar. Evidencia:review_MVP-IDENTIDAD.md.
 
 Cierre Git: seis commits individuales de aplicacion, HEAD c8123253571d51d7fed72661c9b6cf3c309cdad7 en feat/cuentas-proyectos. Autor y committer AESRJ verificados; sin push. El indice y los cambios anteriores de instalacion se preservaron separados.
+
+## 2026-11-22 - Consulta de rumbo y trabajo restante
+
+Se revisan current/context/feature_list/constitucion/brief y tareas operativas: 17 de catalogo y6 de cuentas completas, cero pendientes en esas entregas. init.ps1 correcto. Se documenta rumbo en docs/product/roadmap-status.md: tres bloques sin especificar y rango preliminar21-29 tareas adicionales para MVP local, sin convertir estimaciones en tareas oficiales ni iniciar implementacion. Fuente local suficiente; no se consulta NotebookLM porque el estado verificado de Git resuelve el recuento. Sin commits ni push.
+
+## 2026-11-22 — Entrega004
+Codex especifica/planifica siete tareas para cierre del flujo; Outline wiki confirmado. Investigación oficial con agente auxiliar, sin producto modificado por Codex. Higgsfield MCP registrado mediante claude mcp add; login rechazado porque el servidor de proyecto espera aprobación interactiva. Sin evasión. init maestro estructura OK; PATH de esta shell requiere rutas Node/Claude explícitas. Ejecución y evidencia activa solo .project/ del código.

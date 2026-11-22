@@ -1,0 +1,46 @@
+{
+  "feature_id": "MVP-CIERRE",
+  "status": "ready",
+  "planner": "codex",
+  "executor": "claude-code",
+  "spec_dir": "specs/004-flujo-final",
+  "task_ids": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006",
+    "T007"
+  ],
+  "allowed_paths": [
+    "apps/api",
+    "apps/web",
+    "tests/e2e",
+    "package.json",
+    "pnpm-lock.yaml",
+    ".github/workflows/catalog.yml",
+    "playwright.config.js",
+    "README.md",
+    ".project/progress",
+    ".project/context.md",
+    ".project/verification.md",
+    ".project/specs/004-flujo-final/tasks.md"
+  ],
+  "verification_commands": [
+    "pnpm lint",
+    "pnpm build",
+    "pnpm test (focused workflow/security selection)",
+    "pnpm test:e2e (final-flow smoke)",
+    "init.cmd"
+  ],
+  "blockers": [],
+  "external_dependencies": [
+    "Higgsfield image: project MCP requires client approval then OAuth; continue independent work, do not claim asset complete"
+  ],
+  "implementation_report": "progress/impl_MVP-CIERRE.md",
+  "review_report": "progress/review_MVP-CIERRE.md",
+  "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
+  "execution_mode": "one task per Claude invocation; Codex review and commit; no push",
+  "commit_interval_minutes": 20
+}

@@ -56,6 +56,14 @@
       "spec_dir": null,
       "owner": "claude-code",
       "evidence": null
+    },
+    {
+      "id": "MVP-CIERRE",
+      "title": "Flujo final: catálogo, recursos, planes y seguimiento",
+      "status": "in_progress",
+      "spec_dir": "specs/004-flujo-final",
+      "owner": "claude-code",
+      "evidence": null
     }
   ]
 }

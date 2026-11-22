@@ -1,0 +1,15 @@
+# Investigación y decisiones — 2026-11-22
+
+Decisión: cinco alternativas. Conservar Nextcloud→Google Drive e Immich→Google Fotos; agregar Matrix/Synapse→Slack, WireGuard→Tailscale (advertir diferencias en gestión/NAT), Outline wiki→Notion (sin prometer paridad completa). Retirar GitHub/Gitea/Forgejo de nuevas selecciones, conservar referencias históricas. La cobertura antigua de dos alternativas para un mismo SaaS queda sustituida; comparar categorías distintas sigue posible y no exige inventar relaciones.
+
+Decisión: fuentes oficiales separadas de presupuesto editorial. No convertir RAM por proceso en requisito de toda la pila. Presupuestos del prototipo no equivalen a garantía. Alternativa descartada: precisión inventada o benchmark inexistente.
+
+- Nextcloud: https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html —128/512MB son por proceso, no total. Instalación: https://docs.nextcloud.com/server/latest/admin_manual/installation/index.html . AGPLv3.
+- Immich: https://docs.immich.app/install/requirements/ —6GB/2cores mínimos actuales,8GB/4 recomendados; amd64/arm64, MLv3 amd64 requiere x86-64-v2; almacenamiento PostgreSQL local con permisos Unix. Compose: https://docs.immich.app/install/docker-compose/ . AGPLv3.
+- Matrix es protocolo: https://spec.matrix.org/latest/ . Servidor Synapse: https://element-hq.github.io/synapse/latest/setup/installation.html —PostgreSQL producción, HTTPS, server_name estable. Referencia1GB para salas grandes no es mínimo universal. https://github.com/element-hq/synapse#copyright-and-licensing —AGPLv3 o comercial.
+- WireGuard: https://www.wireguard.com/install/ y https://www.wireguard.com/quickstart/ —instalación nativa por SO; claves/peers/rutas/UDP/NAT. Sin mínimo universal RAM/CPU publicado en esas fuentes. https://www.wireguard.com/known-limitations/ . wireguard-tools GPLv2: https://git.zx2c4.com/wireguard-tools/plain/COPYING . No afirmar que atraviesa CGNAT automáticamente.
+- Outline wiki: https://docs.getoutline.com/s/hosting/doc/requirements-ULdYnwi4wG —Unix, PostgreSQL14+,Redis4+, dominio, proveedor auth;512MB/1GB referencia aplicación, no pila total. https://docs.getoutline.com/s/hosting/doc/docker-7pfeLP5a8t ; https://docs.getoutline.com/s/hosting/doc/file-storage-N4M0T6Ypu7 —almacenamiento local persistente válido. https://raw.githubusercontent.com/outline/outline/main/LICENSE —BSL1.1 source available, no open source; restricción Document Service comercial. Parámetros cambian por versión. Requirements prevalece sobre From source antiguo que menciona PostgreSQL9.5.
+
+Decisión: prompts por plantillas de preparación/instalación/verificación/recuperación, personalizados y copiables. No proveedor de IA ni claves. Alternativa aplazada: generación mediante API externa.
+
+Decisión: Higgsfield exacto pedido por usuario. MCP https://mcp.higgsfield.ai/mcp registrado en configuración ignorada. Cliente exige aprobación interactiva previa y OAuth; no conexión comprobada. https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent . No comprar suscripciones ni atribuir SVG propio al proveedor.
