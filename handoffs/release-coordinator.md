@@ -8,7 +8,7 @@ Lee progress/current.md, docs/context/project-context.md, feature_list.json y `.
 
 ## Trabajo autorizado y orden
 
-005-ajustes-ui: cuatro tareas; círculos/árbol y comparación dentro del dashboard, buscador/copy, selector de proyectos por servicio. Está ready. Luego006-acceso-google,007-equipo-y-plan-seguro,008-preparacion-railway están completamente planificadas, con contratos/modelos/tareas y handoffs draft. Codex puede activarlas dentro de ese alcance después de revisar dependencias; Claude no puede hacerlo. Máximo una feature in_progress. No saltarse una dependencia de código o migración.
+Consulta primero la cola y los handoffs vigentes: 005 ya puede estar cerrada. Orden autorizado: 005 interfaz (4 tareas), 006 Google (5), 007 equipo y seguridad (4), 008 Railway (3). No reabrir entregas cerradas. Codex activa las siguientes tras revisar dependencias; Claude no se autoautoriza. Una feature in_progress como maximo. No saltarse dependencias de codigo o migracion.
 
 Google requiere que el usuario configure el cliente y sus credenciales; explicó que no conocía ese registro. Guía docs/setup-google.md. Railway fue confirmado conectado por el usuario, pero esta sesión no verificó herramientas ni cuenta/costos. Reintenta descubrir herramientas pertinentes antes de afirmar bloqueo; no asumas que hay tokens de CLI ni reutilices credenciales ajenas. Si necesitas una acción manual, prepara lo independiente y devuelve la acción concreta, sin solicitar secretos por chat.
 

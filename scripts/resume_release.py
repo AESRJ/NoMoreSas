@@ -24,8 +24,9 @@ def preflight(config):
   path=(repo/rel).resolve();assert path.is_relative_to(repo)
   assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==digest,'Archivo previo cambió: '+rel
  queue=json.loads((repo/'.project/execution-queue.json').read_text(encoding='utf-8'))
- assert queue['active']=='005-ajustes-ui'
- handoff=json.loads((repo/'.project/handoffs/005-ajustes-ui.json').read_text(encoding='utf-8'))
+ active=config.get('expected_active_feature','005-ajustes-ui')
+ assert active in queue['order'] and queue['active']==active,'Entrega activa distinta a la preparada'
+ handoff=json.loads((repo/'.project/handoffs'/f'{active}.json').read_text(encoding='utf-8'))
  assert handoff['status']=='ready' and not handoff['blockers']
  return repo
 
@@ -42,7 +43,7 @@ def main():
   assert result.returncode==0 and out.read_text(encoding='utf-8').strip()=='HARNESS_OK',f'Smoke Codex falló, exit={result.returncode}'
   print('CODEX_COORDINATOR_NATIVE_SMOKE_OK');return
  config=json.loads(CONFIG.read_text(encoding='utf-8'));repo=preflight(config)
- if a.check:print('RESUME_PREFLIGHT_OK: rama, HEAD, índice, cambios previos y entrega005');return
+ if a.check:print('RESUME_PREFLIGHT_OK: rama, HEAD, índice, cambios previos y entrega activa');return
  due=datetime.fromisoformat(config['not_before'])
  if datetime.now(timezone.utc)<due:save({'status':'waiting_scheduled_time','not_before':config['not_before']});return
  try:handle=LOCK.open('x',encoding='utf-8')
@@ -51,6 +52,10 @@ def main():
  try:
   report=ROOT/'.local/release-coordinator-report.md';events=ROOT/'.local/release-coordinator-events.jsonl'
   prompt=(ROOT/'handoffs/release-coordinator.md').read_text(encoding='utf-8')
+  recovery=config.get('recovery_note')
+  if recovery:
+   note=(ROOT/recovery).resolve();assert note.is_relative_to(ROOT/'.local')
+   prompt+='\n\nESTADO DE RECUPERACIÓN VERIFICADO POR CODEX:\n'+note.read_text(encoding='utf-8')
   cmd=[codex,'exec','--sandbox','danger-full-access','-c','approval_policy="never"','--add-dir',str(repo),'--json','--output-last-message',str(report),'-']
   state={'status':'running','pid':os.getpid(),'code_head_at_start':config['expected_code_head'],'report':str(report),'event_count':0};save(state)
   child=subprocess.Popen(cmd,cwd=ROOT,env=env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True,encoding='utf-8',errors='replace',creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -72,6 +77,11 @@ def main():
     try:row=json.loads(line)
     except ValueError:continue
     item=row.get('item',{})
+    if row.get('type') in ['error','turn.failed']:
+     # Clasificar sin persistir mensajes, argumentos ni contenido sensible.
+     error=str(row.get('message',''))+' '+str(row.get('error',''))
+     lower=error.lower()
+     state['failure_category']='quota_or_billing' if any(s in lower for s in ['usage limit','rate limit','quota','credits','billing']) else ('context_limit' if any(s in lower for s in ['context window','context length']) else ('connection' if any(s in lower for s in ['stream disconnected','connection','network','timed out']) else 'unclassified'))
     # No guardar razonamiento, prompts, argumentos ni salidas crudas de herramientas.
     lean={'time':datetime.now(timezone.utc).isoformat(),'event':row.get('type'),'item_type':item.get('type'),'status':item.get('status'),'exit_code':item.get('exit_code')}
     if row.get('type')=='thread.started':lean['thread_id']=row.get('thread_id')

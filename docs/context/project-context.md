@@ -1,3 +1,9 @@
+# Recuperacion vigente - 2026-11-22 18:28
+
+005cerrada;006activa, T001ced3ca8/T002dcf9dec comprometidas y revisadas. ClaudeT003 parcial, sin aceptar: limite5h hasta19:20. Controlador anterior fallo15:45; nuevo inicio registrado19:21 America/Tijuana en tareaWindows NoMoreSaaS-Reanudar-20261122-1921 Ready. Config valida006/HEAD/indice/79archivos preservados; nota.local/release-recovery-1921.md. Googlelive yRailway operativo pendientes; sinpublicacion. Fuente de estado progress/current.md y cola del codigo. No iniciar escritor duplicado.
+
+## Contexto anterior (historico)
+
 # Estado vigente — acceso Google
 
 Actualizado2026-11-22 15:26.005 está revisada y cerrada con cuatro commits verificados: a73e628, c3ab411,2adea045 yddd3bac.006 es la única activa/ready: T001 aceptada y su snapshot congelado espera al helper23592 hasta~15:45; T002 en construcción por Claude; T003–T005 pendientes.007/008 siguen draft. Codex planifica/revisa/documenta/opera; Claude construye producto, pruebas y Docker. Una feature activa, una tarea por invocación y commits cada20min; sin push inferido. Ejecución y checkboxes solo en .project del código separado.

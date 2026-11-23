@@ -5,7 +5,7 @@ $configPath=Join-Path $root '.local/release-resume-config.json'
 $config=Get-Content -LiteralPath $configPath -Raw -Encoding utf8|ConvertFrom-Json
 if(-not $config.enabled){throw 'Reanudación desactivada'}
 if($NotBefore -le [datetimeoffset]::Now){throw 'Horario pasado: revisar cuota y programar un horario explícito nuevo'}
-$taskName='NoMoreSaaS-Reanudar-20261122-1421'
+$taskName='NoMoreSaaS-Reanudar-'+$NotBefore.ToString('yyyyMMdd-HHmm')
 $expected=Join-Path $PSScriptRoot 'resume-release.ps1'
 $registration=@{method=$null;task_name=$taskName;not_before=$NotBefore.ToString('o');verified=$false}
 try{

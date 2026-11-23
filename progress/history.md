@@ -189,7 +189,80 @@ Codex formaliza005–008 con SpecKit templates/setup-plan/setup-tasks/prerequisi
 ## 2026-11-22 — Verificación del coordinador de reanudación
 Codex comprobó sintaxis PowerShell y compilación Python del arnés, init maestro y handoff005 (0/4). Codex CLI nativo respondió HARNESS_OK con autenticación local; no se cambió cuenta/modelo. La política local bloquea invocar directamente init.ps1: la verificación se ejecutó mediante una política limitada al proceso, sin cambiar configuración persistente. Las advertencias de PATH no son ausencia de herramientas: los runners usan rutas explícitas. Dos entradas anteriores de planificación quedaron repetidas por reejecutar el generador; se conservan por bitácora append-only. Sin código de producto modificado. La cuota real y el registro del horario siguen siendo condiciones independientes.
 
+## 2026-11-22 — Reanudación registrada y comprobada
+Codex guardó planificación en maestro ef1e823 y código 5ca15e4 con AESRJ autor/committer, sin producto ni push. Preflight correcto: rama, HEAD, índice y 75 archivos previos preservados. Register-ScheduledTask creó NoMoreSaaS-Reanudar-20261122-1421; Get-ScheduledTask/Get-ScheduledTaskInfo confirmaron Ready y próximo inicio 2026-11-22T14:21-08:00. No fue necesario temporizador de respaldo. Sintaxis de tres PowerShell y py_compile de tres Python correctos; init maestro y handoff005 ready 0/4 correctos. NotebookLM aceptó fuente d7b227bb-ba62-4c91-8005-5b4c31713c23, ready=false al añadir, sin atribuir procesamiento concluido. Google y acceso operativo Railway pendientes; cliente rechazó Brave sin acciones posteriores. Sin despliegue ni inventario real recogido. Los documentos operativos actualizados después del commit quedan pendientes de consolidar en el siguiente commit de documentación; no tocar el checkout preparado antes del inicio.
+
+## 2026-11-22 ? Reanudaci?n aut?noma14:21
+
+Codex coordinador; producto delegado aClaude exclusivamente. Lectura AGENTS/constituciones/estado/cola005. `init.ps1` y `init.cmd`:PASS ready0/4. Rama feat/revision-y-railway HEAD5ca15e4, ?ndice vac?o, estado previo coincide con preparaci?n; preservados herramientas/bit?coras. `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/invoke_claude_release_task.ps1 -Feature005-ajustes-ui -TaskIdT001` (argumentos separados en ejecuci?n real): iniciado y activo. NotebookLM `login --check` y consulta cuaderno3323fc9c: autenticaci?n/consulta correctas, citas d7b227bb/1e33b13e contrastadas con documentos/Git; no sustituyen estado vivo. Descubrimiento herramientas sin Railway/NotebookLM expuestos; CLIrailway no encontrado enPATH. Sin publicaci?n ni commit nuevo todav?a.
+
+## 2026-11-22 — T001 aceptada y T002 iniciada, 14:25
+
+Claude T001 exit0/is_error=false, solo checkboxT001. Codex revisó diff y contratos: copy/selector pruebas sin cambiar validación15–128/Unicode/hash/imagen/paleta. `pnpm.cmd lint` PASS; `pnpm.cmd --filter @nomoresaas/web test -- tests/catalog.test.jsx tests/hero.test.jsx tests/auth.test.jsx` ejecutó169tests/11archivos PASS por separador, no repetir innecesariamente; Claude73tests/4archivos PASS. `git diff --check -- apps/web tests/e2e` PASS. Helper `release_review_commit.py 005-ajustes-ui T001 --prepare` y sinprepare: commita73e628a5179abb9b7f276f21164ae209eb8eb65, AESRJ autor/committer comprobados, índice vacío. Manifiesto solo rutas explícitas y sección nueva de historia, preservando modificaciones previas. Primer intento de preparar manifiesto falló por codificaciónUnicode enpipePowerShell; índice no se tocó, se corrigió OutputEncodingUTF8 y documentos nuevos, y se repitió correctamente. Entrada anterior de bitácora puede contener caracteres de sustitución; este registro precisa el resultado sin borrar historia. Runner invocado para005/T002, activo. NotebookLM consultado víaCLI local autenticada, fuentes d7b227bb/1e33b13e verificadas contra cola/Git. Sin Railway operativo descubierto, sin publicación/push.
+
+## 2026-11-22 — T002 aceptada, T003 iniciada, 14:36
+
+ClaudeT002 exit0/is_error=false, soloT002 nueva marcada. Codex revisó todos los diffs, fuentes oficiales y capturas360/1280. Independiente: lintPASS; vitest web explorer/catalog/accessible-names25PASS; APIcatalog66PASS; Playwright explorer8PASS conAPI3501/web5773/DBtemporal; diffcheckPASS. Claude build/web161PASS; APIgeneral262/263, timeoutdb.test.js sin cambio pasó aislado28/28; registrar límite, no proclamar todoverde. E2E antiguos pendientesT004. Manifiesto rutas explícitas y secciónhistoriaT002, helperpreparePASS; helper sinwait informó520s restantes. Proceso ocultoPID12860 con--wait iniciado, snapshotcongelado, resultado futuro sin afirmar. Runner005/T003 activo. Sin publicación/push, datos previos intactos.
+
+## 2026-11-22 — T003 aceptada, 14:41
+
+Claudeexit0/is_error=false, T003marcada sola. Codex revisó diff contra snapshotT002 del índice, selector/contratos/pruebas/captura360. Independiente vitestprojects38PASS, Playwrightidentity8PASS enDBtemporal3501/5773, diffcheckPASS. Claude lint/web164/identity+workflow10PASS. API/persistencia/seguridad sin cambios. T003 aceptada, no commitpreparado hasta que termine helperT002 (~14:45). No iniciarT004 antes de congelarT003 para conservar separación por tarea. Espera de cadencia explícita delusuario, sin fechasfalsas.
+
+## 2026-11-22 — CommitT002 verificado, T004 iniciada, 14:45
+
+HelperocultoT002 terminó: c3ab411875d69f1796c5a2f08f220455057bc1ef,14:44:58-08:00,20min desdeT001. Autor/committerAESRJ e índicevacío verificados. ManifiestoT003baseactualizada alcommitT002, helperpreparePASS; procesoocultoPID30120 --wait hasta~15:05. T004runnerClaude iniciado conhandoff3/4, integracióne2e/contexto/evidencia. Googleconfigpresenciaúnicamente: tresvariablesausentes tantoenprocesocomo.env; sincontenidoimpreso. NoRailwayniDockerCLIenPATH ni herramientaconsultableRailway. Sin publicación/push.
+
+## 2026-11-22 — Revisión de integración y reparaciones T004, 14:51
+
+Claude inicial: lint/build/web164/e2e48PASS, API262/263timeoutcuota100 repetido. Codex263API/PASSsinfileparallelism, evaluó fixture100commitsSQLiteFULL y volvió al análisis/tarea. SpecKit-analyze prerequisitesPASS;7FR/3SC/9campos cubiertos, V1MEDIOgateinestable. Codex amplióplan/T004/handoff soloapps/api/tests/db.test.js; initambosPASS. Maestro commita2b2f4d2db318cd34ae21d38fd085e961fb5e23c (4docs)AESRJverificado, sin archivosprevios incluidos. Claude reparó preparación100fixtures en una transacción, aserciones101/segunda cuenta intactas. Independiente pnpm lint/build/testPASS263API/164web; e2e47/48fallaRGBintermedio197,252,14durantetransiciónCSS, no paletaerrónea. SegundaRepairNote enviada porrunnerT004: aserciónreintentablecolorfinalexacto, sin cambiarproducto/aflojartest; checkboxT004reabierta aún no marcado, pedir verificarlo. Convergencia005iniciada, pendiente cierretrasreparación. PluginManagementsearchRailway/dependencies informa disponiblepero source_plugin_installed=false; sugerenciaemitida, no conexiónoperativaverificada. Sin despliegue/push.
+
+## 2026-11-22 — T004 aceptada y convergencia005, 14:53
+
+Claudeúltima reparaciónexit0/is_error=false: toHaveCSS exacto yreintentable sinmodificarCSS; portada4/4 yfull48/48PASS, checkboxT004verificadomarcarda. Independiente portada4/4PASS trasúltimocambio; suiteprevia47/48 se conserva como fallo y correción cubierta, API263/web164/lint/buildPASS. initcmd4/4 ydiffcheckPASS. Speckitconverge sobrecódigopresente/artefactos:7FR/3SC/4US/8decisiones/5principios,cerobrechas; tareas sin cambiosporconvergencia. Review_UX-REVISION actualizado, T004aceptada sincommitpreparado porpendienteT003hasta~15:05. No activarconstrucción006 hasta congelarT004 (compartirádbtest), preservarsnapshot por tarea. Pnpmview google-auth-library11.3.4 Node>=22 coincideplan006, consulta sininstalar/cambiardependencias. Railwaydirectorioinforma noinstalado; falta habilitarloenesta sesión para verificarcuenta/costos.
+
+## 2026-11-22 — Preparación006 y memoria sincronizada, 14:55
+
+Reanálisis006 medianteoverrideNO_PERSIST conserva puntero005: prerequisitesPASS; H1HIGH409vs303entreplan/contrato/T003, cobertura7FR/3SC/18campos. Codex aclaró trasanálisis enplanes/contratos/tareas/analysismasterycódigo: callback303 conmotivosinternosfijos,409soloJSON, sinmutaciónenconflicto;006siguedraft. AmbosinitPASS. NotebookLMsourceadddelestadoparcial005revisadoconGit: fuente57f2e1ff-02f2-4003-be65-0ff7554914a1ready. T004manifiesto aceptado guardadoconrutasexplícitas y3seccioneshistóricas; sinprepareíndicemientrasT003pendiente.
+
+## 2026-11-22 — Activación documental006, 15:05
+
+T003helperterminó2adea045dff922b200fd79020cd53c0e3d66b74d15:04:58,AESRJverificado/índicelibre. T004manifiestobaseactualizada,preparePASS;helperoculto39340--wait~15:25. Codexactiva006tras005codereviewed/convergencia:índiceúnica006inprogress,handoffsmaestro/código005closed006ready,cola,punteros,AGENTS/CLAUDE/contextosactualizados. No mezclardocs006coníndicecongeladoT004. ReferenciaversionadacódigoactualizartrascommitmaestrodepreparaciónyluegoinitambosantesClaude. Googlelive/Railwayoperativopendientes,sinpublicación/push.
+
+## 2026-11-22 — Preparación006 guardada, 15:08
+
+Maestro2f21547329b4257360f3daec7c6f0389da23fecf (12documentos revisados, AESRJautor/committer), sin bitácora/cambiosprevios añadidos por comodidad. Referenciaversionada .project/identity-source.json apunta a specs/006-acceso-google y aeseSHAmaestro; punteros006/cola/handoffs/roles/contextos consistentes. ÍndicecódigoT004congeladopreservado, no preparadootrocommit. Initambos a verificar antesde invocarClaude006/T001.
+
+## 2026-11-22 — Construcción006/T001 iniciada, 15:08
+
+Initmaestro/code ycheck_handoff006--implementation-readyPASS0/5. Referenciaversionada006→maestro2f21547/punteros/cola verificados. RunnerClaude006/T001activo, sesióndistintaporfeature. T004005snapshotcongeladoesperahelper39340; índicepreservado. Sinpush/despliegue/migraciónDBpreview.
+
+## 2026-11-22 — Revisión006/T001 aceptada, 15:14
+
+Claudeexit0/is_error=false, soloT001marcada. Independiente144testsdb/identities/auth/projectsPASSydiffcheckPASS; Claude274API/lintPASS. Login conArgon2realdec uenta002migrada conservaUUID/hash yrechazapasswordincorrecta; SQLcopyexacta, tablasrelacionadas/FK/cascadas/rollbackyreintentorevisados. SoloDBtemporales, sin tocarpreview. Revisión ymanifiesto006/T001conrutasexplícitas másdocumentaciónpreparación006revisada(2f21547); no prepararíndicehastahelper005/T004termine~15:25. T002pendiente.
+
+## 2026-11-22 — Commit005/T004 verificado, 15:25
+
+Helper39340 terminóddd3bac9dfb4490fb3ffa81babf9e652cb5ee41f15:24:58, AESRJautor/committer e índicevacío comprobados. Los4commits005 quedan verificados sinpush.006/T001manifiestobaseactualizadaddd3bac ydocumentaciónpreparaciónrevisada,cierre005actualizado; prepararconhelpersinmezclaríndice ydespuésT002Claude.
+
 ## 2026-11-22 — Cierre005 y construcción006/T002
 Codex verificó los cuatro commits de005: a73e628, c3ab411,2adea045 yddd3bac9dfb4490fb3ffa81babf9e652cb5ee41f, todos con AESRJ como autor/committer y20min entre tareas. Claude construyó producto y pruebas; Codex revisó y ejecutó lint/build/API263/web164; un fallo e2e de color transitorio se corrigió por Claude con aserción reintentable y exacta:48e2e finales de Claude, portada4 de Codex. Convergencia005 sin brechas. Sin push/publicación.
 Preparación006 guardada en maestro2f21547, punteros/cola/handoffs/identidad-source coherentes e initambosPASS.006T001 de Claude aceptada:144API enfocadas PASS independientes; Claude274API/lintPASS. Migración003 copia hashes exactos, conservaUUID y datos relacionados; cuenta002 conArgon2real inicia sesión trasmigrar; rollback/cascadas/FK verificados en DB temporal. No migrar preview.
 El helper005/T004 terminó15:24:58 y dejó índice libre.006/T001 fue preparada sobre ddd3bac, helper oculto23592 espera~15:45. Claude006/T002 iniciado (proveedorOIDC, intentos de un uso y callback). No afirmar commit futuro ni modificar el índice congelado. Google real, Railway operativo/costos y DockerLinux siguen pendientes; no usar otra cuenta ni publicar datos locales. FuenteNotebookLM57f2e1ff ready con estado parcial14:55. Cambios locales previos conservados.
+
+## 2026-11-22 — Revisión006/T002 devuelve carrera de sesión aClaude
+
+ClaudeT002exit0/is_error=false,19OIDC/294API/lintPASS. Añadió timeout20s solo al test24h que hace~72escriturasSQLiteFULL: dos timeouts5s reproducibles y107/107aislado, asercionesintactas; ajuste localizado a revisar. Codex detectó en google-auth.js consumo/comprobaciónantesde awaitprovider.exchange y ninguna revalidacióndesid persistente después: posible autenticación tardía traslogout/rotación/expiración. T002reabierta[ ], RepairNoteSC003invocada porrunner (sesión4540); exige regresiones diferidas con DB/identidad/cookie, sin alterar política003 ni tocar índice23592pendiente. T002noaceptada.
+
+## 2026-11-22 —006/T002 aceptada tras reparaciones,15:40
+
+Claude reprodujo4carreras de sesión (fallaban4/4antes), reparó sesión/TTL despuésdelcanje y suprimió cookies enfallos; segunda revisión eliminóawaitentreúltimarelectura ymutación conprueba determinista quefalla conawait. Independiente lint/156API/diffcheckPASS; Claude24OIDC/156regresiónPASSy298APIcompleta trasprimerfix. PruebasRSAconbibliotecareal sinred,noGooglevivo. Ajustetimeout20s solocasoprueba24h, aserciones/políticaintactas. T002aceptada/manifiestoguardado; no prepararíndicehastahelper23592termineT001~15:45. Filtroinicialdetectósección005T002histórica; seacotó a las3secciones006T002másrevisiónCodex,sin tocaríndice. Root5b7d531 confirmó005; diffignora-EOL demuestra solo nueva secciónhistórica (normalizaciónCRLF→LF sinborrartexto); modificacionespreviasdebitácoraseconservanlocales.
+
+## 2026-11-22 18:24 - Recuperacion solicitada por el usuario
+El controlador termino con exit1 a15:45, sin reporte final; el log solo conservo error/turn.failed sin causa clasificable. No habia constructor activo al recuperar. 006/T001 ced3ca8 confirmado; 006/T002 revisada de nuevo, Vitest24/24PASS y commit dcf9dec con identidadAESRJ. Invocacion inicial node--test incorrecta paraVitest, corregida sin modificar producto. ClaudeT003 iniciado18:25 en su misma sesion, herramientas/ediciones verificadas. CodexCLI smoke nativo HARNESS_OK. Arnes de reanudacion generalizado para validar entrega activa y clasificar futuros errores sin guardar mensajes sensibles. Sin publicar, migrar preview o recoger inventario.
+
+## 2026-11-22 18:27 - Limite real de Claude
+T003 parcial devuelta exit1/is_error=true a18:26, cuota5h hasta19:20 America/Tijuana. No aceptada ni commit; se conserva cambio parcial para19:21. Sin escritor activo. Recuperacion del arnes valida entrega006 dinamica y clasifica errores sin guardar contenido sensible. Registro horario pendiente de comprobar.
+
+Registro real19:21 comprobado: Register-ScheduledTask/Get-ScheduledTaskInfo, tarea NoMoreSaaS-Reanudar-20261122-1921 Ready, next_run_time2026-11-22T19:21-08:00. Preflight006 correcto,79archivos preservados. No modificar el checkout preparado antes del nuevo inicio. Sin resultado futuro atribuido.
+
+NotebookLM fuente de recuperacion enviada mediante source_add; estado de procesamiento se verifica aparte. No contiene secretos.
