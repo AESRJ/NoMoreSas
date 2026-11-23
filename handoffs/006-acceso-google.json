@@ -1,6 +1,6 @@
 {
   "feature_id": "AUTH-GOOGLE",
-  "status": "ready",
+  "status": "in_review",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/006-acceso-google",
@@ -32,7 +32,9 @@
     "browser smoke360/1280",
     "init.cmd"
   ],
-  "blockers": [],
+  "blockers": [
+    "Google client/consent/protected variables and real live flow pending"
+  ],
   "implementation_report": "progress/impl_AUTH-GOOGLE.md",
   "review_report": "progress/review_AUTH-GOOGLE.md",
   "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
@@ -46,5 +48,6 @@
   ],
   "prepared_at": "2026-11-22",
   "activated_at": "2026-11-22",
-  "activation_evidence": "UX-REVISION code reviewed; review_UX-REVISION.md; frozen005/T004; liveGoogle gate still pending"
+  "activation_evidence": "UX-REVISION code reviewed; review_UX-REVISION.md; frozen005/T004; liveGoogle gate still pending",
+  "code_reviewed": true
 }

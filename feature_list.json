@@ -77,19 +77,21 @@
     {
       "id": "AUTH-GOOGLE",
       "title": "Acceso con Google",
-      "status": "in_progress",
+      "status": "blocked",
       "spec_dir": "specs/006-acceso-google",
       "owner": "claude-code",
-      "evidence": null,
-      "code_reviewed": false
+      "evidence": "progress/review_AUTH-GOOGLE.md",
+      "code_reviewed": true,
+      "external_blocker": "Google OAuth client/consent/variables/live pending"
     },
     {
       "id": "MVP-EQUIPO-ASISTIDO",
       "title": "Equipo detectado o importado y planes claros con seguridad",
-      "status": "pending",
+      "status": "in_progress",
       "spec_dir": "specs/007-equipo-y-plan-seguro",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": null,
+      "code_reviewed": false
     },
     {
       "id": "DEPLOY-RAILWAY",

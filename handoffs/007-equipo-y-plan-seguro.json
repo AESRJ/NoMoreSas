@@ -1,6 +1,6 @@
 {
   "feature_id": "MVP-EQUIPO-ASISTIDO",
-  "status": "draft",
+  "status": "ready",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/007-equipo-y-plan-seguro",
@@ -19,7 +19,8 @@
     ".project/context.md",
     ".project/verification.md",
     ".project/progress",
-    ".project/specs/007-equipo-y-plan-seguro/tasks.md"
+    ".project/specs/007-equipo-y-plan-seguro/tasks.md",
+    ".gitattributes"
   ],
   "verification_commands": [
     "pnpm lint",
@@ -41,5 +42,7 @@
   "external_dependencies": [
     "Node22+ Windows collector runtime verified on supported platform"
   ],
-  "prepared_at": "2026-11-22"
+  "prepared_at": "2026-11-22",
+  "activated_at": "2026-11-22",
+  "activation_evidence": "005 reviewed; migration003 ced3ca8 reviewed; 006 code reviewed T001-T005, Googlelive external pending. T004 frozen/T005 accepted pending commit; preserve index and accepted files."
 }

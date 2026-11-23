@@ -26,7 +26,21 @@ else:
  for rel in review['paths']:
   resolved=(repo/rel).resolve();assert resolved.is_relative_to(repo.resolve())
   assert '.env' not in resolved.parts and '.local' not in Path(rel).parts and Path(rel).suffix not in ['.sqlite','.db']
- git('add','--',*review['paths'])
+ # Optional immutable blobs preserve an accepted task while later reviewed work
+ # continues in the working tree. Only explicitly reviewed paths are staged.
+ blobs=review.get('reviewed_blobs')
+ if blobs is not None:
+  assert set(blobs)==set(review['paths']),'Los blobs deben corresponder exactamente a los paths revisados'
+  for rel,entry in blobs.items():
+   oid=entry['oid'];mode=entry['mode']
+   assert len(oid)==40 and all(c in '0123456789abcdef' for c in oid),'OID invalido'
+   assert mode in ['100644','100755'],'Modo no permitido'
+   assert git('cat-file','-t',oid)=='blob','Objeto revisado no es blob'
+  for rel,entry in blobs.items():
+   oid=entry['oid'];mode=entry['mode']
+   git('update-index','--add','--cacheinfo',mode+','+oid+','+rel)
+ else:
+  git('add','--',*review['paths'])
  if review.get('history_sections'):
   rel='.project/progress/history.md';before=git('show','HEAD:'+rel)+'\n';current=(repo/rel).read_text(encoding='utf-8')
   for section in review['history_sections']:
