@@ -1,6 +1,6 @@
 {
   "feature_id": "AUTH-GOOGLE",
-  "status": "in_review",
+  "status": "cancelled",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/006-acceso-google",
@@ -49,5 +49,6 @@
   "prepared_at": "2026-11-22",
   "activated_at": "2026-11-22",
   "activation_evidence": "UX-REVISION code reviewed; review_UX-REVISION.md; frozen005/T004; liveGoogle gate still pending",
-  "code_reviewed": true
+  "code_reviewed": true,
+  "user_decision_2026_11_22": "Acceso con Google retirado por decision del usuario"
 }

@@ -1,6 +1,6 @@
 {
   "feature_id": "DEPLOY-RAILWAY",
-  "status": "draft",
+  "status": "in_review",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/008-preparacion-railway",
@@ -49,5 +49,6 @@
   "external_dependencies": [
     "Railway operative access, plan/cost limits and live deployment; Google production redirect config"
   ],
-  "prepared_at": "2026-11-22"
+  "prepared_at": "2026-11-22",
+  "user_decision_2026_11_22": "T001-T003 implementadas; despliegue vivo pendiente de volumen/variables en Railway"
 }

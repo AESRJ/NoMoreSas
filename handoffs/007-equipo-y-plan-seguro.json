@@ -1,6 +1,6 @@
 {
   "feature_id": "MVP-EQUIPO-ASISTIDO",
-  "status": "ready",
+  "status": "in_review",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/007-equipo-y-plan-seguro",
@@ -44,5 +44,6 @@
   ],
   "prepared_at": "2026-11-22",
   "activated_at": "2026-11-22",
-  "activation_evidence": "005 reviewed; migration003 ced3ca8 reviewed; 006 code reviewed T001-T005, Googlelive external pending. T004 frozen/T005 accepted pending commit; preserve index and accepted files."
+  "activation_evidence": "005 reviewed; migration003 ced3ca8 reviewed; 006 code reviewed T001-T005, Googlelive external pending. T004 frozen/T005 accepted pending commit; preserve index and accepted files.",
+  "user_decision_2026_11_22": "T003/T004 implementadas por Claude Code por instruccion directa del usuario"
 }

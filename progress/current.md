@@ -1,15 +1,12 @@
-# Estado actual - 2026-11-22 20:26 America/Tijuana
+# Estado actual - 2026-11-22 23:40 America/Tijuana
 
-La construccion esta bloqueada por cuota semanal de Claude. Aviso literal del 22-11 a20:19:14: "You've hit your weekly limit · resets Nov 23, 11pm (America/Tijuana)". Runner007/T003 exit1/is_error=true; no reintentos ni cambio de cuenta/modelo. T003 quedo parcial, sin checkbox, sin revision ni commit. Se conservan requirements.json, evaluation.js, workflow.js y evaluation.test.js; hashes en .local/release-weekly-block.json. Codex no completa producto ni pruebas de producto.
+Por instrucción directa del usuario, Claude Code terminó el trabajo pendiente sin esperar la reanudación programada:
 
-005 cerrada. 006 tiene codigo revisado y cinco commits reales: ced3ca8, dcf9dec, 74ce23e, a181317 y be6c53c (T005 a20:11:49), AESRJ autor/committer. Sigue blocked/code_reviewed=true y handoff in_review por cliente/consentimiento/variables y prueba viva de Google pendientes; no done por simulaciones.
+- 007 MVP-EQUIPO-ASISTIDO: T001-T004 implementadas y verificadas; T003/T004 en commit 24d067f. Handoff in_review.
+- 006 AUTH-GOOGLE: retirada por decisión del usuario (commit ae58ad1). Handoff cancelled. Solo correo y contraseña.
+- 008 DEPLOY-RAILWAY: modo producción Express, Dockerfile, entrypoint con volumen y railway.json (ae58ad1, 06bf7f1, 2415d80). Handoff in_review.
+- Repositorio de código: main = 2415d80 subido a GitHub (fast-forward desde f13e6d2) y rama feat/revision-y-railway.
+- Verificación: lint, API 293/293, web 193/193, build, e2e 48/48 (1280/360), smoke de producción local con DB temporal.
 
-007 mantiene la unica feature in_progress y su alcance ready; la ejecucion esta bloqueada por cuota. T001 aceptada, snapshot d5adbdc759a2b6032bc21bdb0bdc41658c60d100 sobre be6c53c, helper ocultoPID33396 espera20:31:49. No tocar indice ni preparar otro commit antes de comprobarlo. T002 aceptada y contenido conservado en blobsGit, aun sinindice/commit; preparar tras T001 y esperar otros20min. T003 parcial no aceptada, T004 pendiente. 008 sigue draft y no se activa sin revisar007 completa.
-
-T002 verificada por Codex: API52/52, web40/40, lint/build y e2e2/2 con3501/5773, DBtemporal y datosbrowser/JSON ficticios; capturas360/1280 inspeccionadas. Claude API319/web211 previas y40enfocadas tras reparacion. Rango exacto antes de redondear, lecturas de archivos obsoletas y keys de volumen corregidas (7fallos antes). Migracion004 aditiva, owner/CSRF/transaccion/revision y manual conservados. Incidencias iniciales de RAM/CPUs por getters reales corregidas, sin valores conservados; no inventarioCIMreal ni DBpreview migrada.
-
-T001:21fixtures/lint/help y checkout-indexaisladoautocrlf PASS; arquitecturaCIM9/12 coherente o unknown y LF para checksum. Codex tambien ejecuto21/21 con Node22.0.0 oficial portable (SHA256 contrastado), sin instalar ni cambiarNode26global. No consultaCIMreal. Arnes snapshots: cuatro Gitfixtures aislados PASS, blobs aceptados separados de cambios posteriores, cadencia20min y guardasbase/tree intactas. Sin fechasfalsas/commitsvacios/push.
-
-Preview: web5573 HTTP200; API3301 ConnectFailure observado, causa no diagnosticada. No reiniciar listeners ni migrar su DB por conveniencia. Datos/herramientas/Impeccable y archivos de notificacion ajenos preservados. Railway catalogo installed=false; sin CLI/Docker operativo ni cuenta/plan/costos verificados, CUAlectura fallo sin inputs. Google3variables ausentes (solo presencia). No URL publica ni despliegue, compras, upgrades, SSH o DBlocal subida.
-
-Reanudacion: preparar una unica tentativa tras23Nov23:00 (propuesta23:01), preservando parcialT003 y la misma sesionClaude1bb18198-0a8e-4fe8-b816-da9973f9a932. NO afirmar programacion hasta registro/verificacion final despues de los commits pendientes. Si esa unica tentativa vuelve a fallar por cuota, registrar y detener, sin cadena infinita. Depende de equipo/sesion/auth/cuota disponibles. NotebookLM auxiliar, Git/cola mandan.
+Pendiente del usuario en Railway: volumen montado en /data, variable SESSION_SECRET=${{secret(64)}}, Generate Domain y redeploy. Guía: NoMoreSaaS_Frontend/.project/docs/deployment-railway.md.
+La tarea programada NoMoreSaaS-Reanudar-20261123-2301 quedó obsoleta: debe desactivarse (no se pudo desde esta sesión).

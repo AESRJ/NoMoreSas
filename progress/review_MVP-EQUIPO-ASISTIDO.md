@@ -18,3 +18,6 @@ Runtime portable oficial Node22.0.0win-x64 descargado solo en.local/toolchains, 
 
 ## 2026-11-22 20:26 - Bloqueo de ejecucion T003, no aceptacion
 Claude devolvio exit1/is_error=true a20:19:14: "You've hit your weekly limit - resets Nov 23, 11pm (America/Tijuana)". T003 parcial, sincheckbox ni revision/commit; se preserva la misma sesion y4paths, no se suple construccion porCodex. 008 no activada y T004 no iniciada. T001/T002 siguen aceptadas y se cierran solo sus commits con cadencia20min. Googlelive/Railway siguen pendientes. Preview web5573 HTTP200 pero API3301 ConnectFailure; no se diagnostico causa ni se reinicio/migroDB.
+
+## 2026-11-22 20:33 - Commit007/T001 real y T002 congelada
+HelperT001 termino con d5d2612b0907b6cc26b9943cd23231e9c09be22e a20:31:49; AESRJautor/committer ytree d5adbdc revisados, indice libre comprobado. T002 nuevo padre d5d2612 corresponde al tree previamente revisado; solapamiento solo9paths de preparacion/documentacion/checkboxes, ningun productoT002 modificado porT001. SnapshotT00225a38e0d70ab04aae4eaf10276cb393048a643f3 preparado conblobsaceptados; helper ocultoPID36044 espera20:51:49. Cacheworkflow coincide exactamente conblobT002, requisitos/evaluation/testevaluation ycheckboxT003 NOstaged. HashesparcialT003intactos. No Claude activo ni nuevo intento por cuota.
