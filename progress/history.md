@@ -266,3 +266,25 @@ T003 parcial devuelta exit1/is_error=true a18:26, cuota5h hasta19:20 America/Tij
 Registro real19:21 comprobado: Register-ScheduledTask/Get-ScheduledTaskInfo, tarea NoMoreSaaS-Reanudar-20261122-1921 Ready, next_run_time2026-11-22T19:21-08:00. Preflight006 correcto,79archivos preservados. No modificar el checkout preparado antes del nuevo inicio. Sin resultado futuro atribuido.
 
 NotebookLM fuente de recuperacion enviada mediante source_add; estado de procesamiento se verifica aparte. No contiene secretos.
+
+## 2026-11-22 19:25 - Reanudacion efectiva 006/T003 (Codex coordina, Claude construye)
+- Leidos estado/contexto/indice/constitucion y cola del codigo; revisados AGENTS, tareas, spec, plan, modelo, contrato y quickstart006. init.ps1 maestro, init.cmd y python tools/check_handoff.py --implementation-ready .project/handoffs/006-acceso-google.json PASS (2/5).
+- Git confirma rama feat/revision-y-railway, HEADdcf9dec, autor/committer AESRJ en T001/T002; indice vacio y parcial google-auth.js conservado. Otros procesosClaude identificados como ajenos al runner006; sin duplicar constructor006.
+- powershell -NoProfile -ExecutionPolicy Bypass -File scripts/invoke_claude_release_task.ps1 -Feature 006-acceso-google -TaskId T003 lanzado19:21; misma sesion, log filtrado006-acceso-google-T003-20261122-192138.jsonl. Trabajo en curso, no aceptado ni comprometido.
+- NotebookLM: nlm login --check autenticacion valida; notebook query3323fc9c-9d8c-4d11-85ba-30944415fa7f con citas ea628262/d7b227bb/57f2e1ff, contraste Git/cola satisfactorio para recuperacion18:28. Recomendacion de esperar cierre006 subordinada a politica actual de continuar tras codigo revisado con live pendiente.
+- Plugin Management search Railway NotebookLM devuelve Railway installed=false y sugerencias previas; no reiterar instalacion ni fingir acceso. Railway/Docker no en PATH. Presencia variables Google comprobada sin leer valores en salida: las tres ausentes. Consulta al usuario solo por estado de setup, sin secretos.
+- Actualizados documentalmente AGENTS/CLAUDE del codigo para corregir referencia antigua de T001 pendiente decommit; sin cambios de producto por Codex.
+
+## 2026-11-22 19:33 - T003 revisada/commit real y T004 en curso
+- Claude T003 exit0/is_error=false; revision encontro cookie antigua en link/start tras hash. Reparacion delegada con -RepairNote .local/repair-006-T003-session.md;5casos fallaron antes y pasan despues. Codex no escribio producto ni pruebas.
+- Independiente API google-auth+auth99/99, web account16/16, lint/diffcheck PASS; capturas360/1280 inspeccionadas. Claude build/e2e account2/identity8 y web176previaPASS.
+- GET /api/account aclarado en contrato/plan maestro y codigo, speckit-analyze prerrequisitos y cobertura7FR/3SC/18campos sin nuevas brechas. Activos checkboxes solo.codigo.project.
+- RevisionJSON con paths explicitos e historia seleccionada; release_review_commit.py006T003 --prepare y sinprepare PASS, commit74ce23eeba50663febb01d5c526259c3dc02589919:31:48. Autor/committerAESRJ comprobados, indice libre. Ningun cambio de herramientasprevias incluido.
+- Runner006T004 iniciado trascommitT003; construccionen curso. Proxima ventana de commit19:51:48; no futurocommitafirmado.
+- Fallback CUA solo lectura: EdgeAX unavailable y captura no corresponde a ventana objetivo; reintento mismoresultado, no inputs. Railway acceso/costo siguen sinverificar. Se aplicaron skills plugin-management y computer-use para descubrimiento/diagnostico; sin mensajes externos.
+
+## 2026-11-22 19:38 - T004 aceptada/congelada, T005 integrando
+- T004 runner exit0/is_error=false, solo checkboxT004 nueva. Codex web195/195, build/diffcheckPASS y capturas360/1280 inspeccionadas; Claude lint/e2e14/14, smoke4/4 trasCSSPASS. SinGooglevivo. RevisionJSON explicita, helper --prepare PASS; sinprepare devuelve WAIT905s (no fallo de producto). Helper --wait en proceso ocultoPID39748 verificado, ventana19:51:48, tree5de95abaa000a0ce3ea5fe4473227c1d2646d61b. No tocarindice ni preparar siguientecommit hasta terminar.
+- T005 iniciada por runner separado; Claude informa API312/web195/lint/buildPASS, e2ecompleto en curso. No aceptar por informe previo ni marcar done porfixtures.
+- Reanalisis previo007: prerequisites con SPECIFY_FEATURE_DIRECTORY y NO_PERSIST PASS; puntero006 conservado. Revisados spec/plan/tasks/modelo/contrato/quickstart;8FR/3SC/4tareas coherentes, recopilador solo fixtures/sin inventario real. No activacion aun.
+- Verificacion de rutas habituales Docker/Podman: ausentes; ni esosCLI niWSL expuestos enPATH. Linux/container reales siguen porverificar en008, sin instalaciones ni compras.

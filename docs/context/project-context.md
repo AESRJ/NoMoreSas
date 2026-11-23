@@ -1,3 +1,13 @@
+# Estado vigente - 2026-11-22 19:33 America/Tijuana
+
+005 cerrada; 006-acceso-google unica activa ready. T001 ced3ca8, T002 dcf9dec y T003 74ce23e revisadas y comprometidas con AESRJ autor/committer. T003 incluye vinculo explicito con reautenticacion y /cuenta; carrera de cookie antigua reproducida5casos y reparada porClaude. Independiente API99/99, web16/16, lint/diffcheck PASS; capturas360/1280 inspeccionadas. Googlelive no probado.
+
+Claude T004 en curso en misma sesion, runner iniciado19:31; no aceptada ni commit, no segundo escritor. Siguiente T005 y activar007/008 solo tras dependencias de codigo revisadas. Commits por tarea20min: anterior19:31:48, proxima ventana19:51:48; helper congela snapshot revisado, no fechasfalsas ni commitsvacios. Indice libre despuesT003. Codex solo planifica/revisa/documenta/opera; todo producto/pruebas/Docker porClaude. Datos/preview y cambiosprevios conservados.
+
+Init maestro/codigo y handoff006 PASS. NotebookLM CLI autenticado y consulta contrastada con fuente ea628262 y Git. Railway catalogo installed=false; CLI Railway/Docker ausentes. Intento de lectura porCUA fallo: estadoAX no disponible y captura de otra ventana; tras reintento se detuvo sin inputs/mutaciones. Cuenta/plan/costo no verificados. Variables Google local/.env las3ausentes (solo presencia). Sinpublicacion ni URL. Falta habilitar acceso operativo Railway y clienteGoogle/variables protegidas/prueba viva; no secretosporchat. Guia maestro docs/setup-google.md. Ninguna compra/upgrade/push/SSH/migracionDBlocal autorizada por inferencia.
+
+## Contexto anterior (historico)
+
 # Recuperacion vigente - 2026-11-22 18:28
 
 005cerrada;006activa, T001ced3ca8/T002dcf9dec comprometidas y revisadas. ClaudeT003 parcial, sin aceptar: limite5h hasta19:20. Controlador anterior fallo15:45; nuevo inicio registrado19:21 America/Tijuana en tareaWindows NoMoreSaaS-Reanudar-20261122-1921 Ready. Config valida006/HEAD/indice/79archivos preservados; nota.local/release-recovery-1921.md. Googlelive yRailway operativo pendientes; sinpublicacion. Fuente de estado progress/current.md y cola del codigo. No iniciar escritor duplicado.

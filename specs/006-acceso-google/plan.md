@@ -30,3 +30,5 @@ Solo dependencias y tablasjustificadas; detalles delalcance/valores de modelo ca
 La migración003 incluye oauth_attempts ligado a hash de sesión. Consumir con DELETE RETURNING antes del canje, no un flag en JSON de sesión que dos callbacks puedan leer a la vez. Verifier efímero privado/TTL5min, limpieza de expirados; nunca tokens Google persistentes ni clientsecret en DB.
 
 Aclaración de transporte2026-11-22: el callbackGET siempre termina303 a ruta interna limpia. Motivos internos permitidos: google_cancelled, google_failed, google_conflict; vínculo correcto /cuenta?reason=google_linked, login correcto /proyectos. Nunca copiar error_description, code/state/tokens ni mensajes del proveedor al destino. Conflictosnoautovinculan/nocambiancredenciales/proyectos. El409 corresponde a operacionesJSON cuando detectan conflicto directamente, no a un cuerpoHTML/JSON crudo del callback.
+
+Revision T003: lectura privada GET /api/account y reautenticacion definidos en contracts/contract.md como detalle necesario de FR-003; misma arquitectura y permisos. Respuestas tardias de link/start no sobrescriben cookie rotada.
