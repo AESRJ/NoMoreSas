@@ -29,21 +29,25 @@
     "browser smoke360/1280",
     "init.cmd"
   ],
-  "blockers": [],
+  "blockers": [
+    "Revision integrada final pendiente; alcance reducido: sin importacion ni recopiladorWindows."
+  ],
   "implementation_report": "progress/impl_MVP-EQUIPO-ASISTIDO.md",
   "review_report": "progress/review_MVP-EQUIPO-ASISTIDO.md",
   "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
   "execution_mode": "one task per Claude invocation; Codex independent review and commit; no push by Claude",
   "commit_interval_minutes": 20,
   "activation_dependencies": [
-    "UX-REVISION code reviewed",
-    "AUTH-GOOGLE migration003 code reviewed"
+    "UX-REVISION revisada",
+    "Migracion003 conservada; Google proveedor retirado"
   ],
-  "external_dependencies": [
-    "Node22+ Windows collector runtime verified on supported platform"
-  ],
+  "external_dependencies": [],
   "prepared_at": "2026-11-22",
   "activated_at": "2026-11-22",
   "activation_evidence": "005 reviewed; migration003 ced3ca8 reviewed; 006 code reviewed T001-T005, Googlelive external pending. T004 frozen/T005 accepted pending commit; preserve index and accepted files.",
-  "user_decision_2026_11_22": "T003/T004 implementadas por Claude Code por instruccion directa del usuario"
+  "user_decision_2026_11_22": "T003/T004 implementadas por Claude Code por instruccion directa del usuario",
+  "code_reviewed": false,
+  "reviewed_product_commit": "b217344623a8e41829fbd796f290239d998ae4f2",
+  "audit_report": "docs/reviews/2026-11-23-cambios-claude.md",
+  "implementation_authorized": false
 }

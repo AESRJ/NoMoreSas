@@ -1,35 +1,42 @@
-# Preparación de despliegue en Railway
+> Estado23-11-2026: copia documental del runbook deClaude en b217344. Sus pruebas son declaradas; no acredita despliegue vivo, recursos, costos ni instrucciones ejecutadas en esta sesión. Google fue retirado. Ver auditoría y ADR0011 antes de operar.
 
-Estado: plan008 definido, implementación y publicación pendientes. El usuario autorizó el despliegue; no hay servicio creado ni URL de producción verificados en esta sesión.
+# Despliegue en Railway
 
-## Configuración propuesta
+Estado: artefactos de despliegue implementados y probados en local (modo producción con DB temporal). La imagen Docker no se construyó en esta máquina (sin Docker); Railway la construye desde GitHub. El acceso con Google se retiró.
 
-- Un servicio del monorepo: Express sirve frontend compilado y API.
-- Puerto `PORT` de Railway e interfaz `0.0.0.0`.
-- Dominio HTTPS generado por Railway, usado como `APP_ORIGIN` exacto.
-- Un proceso y una réplica, SQLite persistente en `/data/nomoresaas/production.sqlite`.
-- Volumen inicial dentro del límite real de la cuenta; no ampliar ni contratar sin límite de gasto aprobado.
-- Migración al inicio con el volumen montado, después de preparar permisos y antes del healthcheck.
-- Secretos nuevos de producción y credenciales Google en variables protegidas, nunca en el bundle o Dockerfile.
+## Qué hay en el repositorio
 
-## Condiciones antes de publicar
+- `Dockerfile` multistage: `node:26.13.1-bookworm-slim` (tag verificado en Docker Hub), pnpm 12.21.0, `pnpm install --frozen-lockfile`, build de Vite y runtime solo con dependencias de producción de la API. No incluye `.env`, `.local`, DB, pruebas ni herramientas (`.dockerignore`).
+- `docker-entrypoint.sh`: como root crea solo `$(dirname DATABASE_PATH)` y le da propiedad `node`; después baja privilegios (`setpriv`), aplica migraciones (`node src/db.js`, idempotente, nunca borra) e inicia la API.
+- `railway.json`: builder Dockerfile, healthcheck `/api/health`, reinicio ON_FAILURE.
+- Modo producción (`NODE_ENV=production`): bind `0.0.0.0`, puerto `PORT`, SPA servida desde `apps/web/dist` (deep links → `index.html`, assets con hash inmutables, `/api/*` desconocido y archivos inexistentes → 404 JSON), `trust proxy` = 1 salto, cookie `Secure` con APP_ORIGIN https, cierre ordenado con SIGTERM.
 
-1. Claude termina las tareas de005–008 y Codex acepta la revisión concreta.
-2. Verificar cuenta/proyecto/plan/créditos de Railway y costo previsto. La confirmación de conexión del usuario no sustituye comprobar acceso operativo.
-3. Completar cliente Google y URI de retorno para el dominio estable. Confirmar audiencia de la app Google.
-4. Probar imagen Linux, Argon2 y SQLite nativos, ejecución con privilegios mínimos y cookies detrás del proxy.
-5. Probar rutas directas,404JSON de API, ausencia de secretos/DB en estáticos, persistencia y respaldo recuperable.
-6. Subir solo el snapshot revisado. No subir `.env`, DB local, configuraciones MCP ni archivos de usuario. Si el mecanismo requiere push a GitHub, resolver ese paso explícitamente; no hacer force.
-7. Verificar la URL pública con un proyecto de prueba autorizado y registrar SHA, estado real y límites.
+## Pasos en Railway (una vez)
 
-## Persistencia y recuperación
+1. Servicio conectado al repositorio `AESRJ/NoMoreSaaS_Frontend`, rama `main`. Railway detecta `railway.json` y usa el Dockerfile.
+2. **Volumen**: añadir un volumen al servicio montado en `/data`. Sin volumen la base se pierde en cada despliegue.
+3. **Variables** del servicio:
+   - `SESSION_SECRET` = `${{secret(64)}}` (Railway genera un valor aleatorio; no cambiarlo después o se cierran todas las sesiones).
+   - Opcional `APP_ORIGIN` = `https://<tu-dominio>` si usas un dominio propio. Si no se define se usa `https://$RAILWAY_PUBLIC_DOMAIN`.
+   - No hace falta definir `PORT`, `NODE_ENV` ni `DATABASE_PATH` (la imagen fija `/data/nomoresaas/production.sqlite`).
+4. **Networking → Generate Domain** para obtener la URL pública https.
+5. Una sola réplica (SQLite es monoproceso).
 
-Railway no monta el volumen durante build o pre-deploy. Un healthcheck no evita la interrupción breve del redeploy con volumen. Respaldar SQLite de forma consistente y probar restauración en datos descartables; no copiar un `.db` abierto sin comprobar consistencia ni borrar el volumen para corregir un fallo.
+## Verificación tras desplegar
 
-La base de producción inicial será nueva. Migrar datos de desarrollo requiere una decisión aparte; no se suben automáticamente las cuentas del equipo local.
+- `GET /api/health` → `{"status":"ok"}`; `/` y un enlace profundo cargan la SPA.
+- Registrar una cuenta de prueba, crear un proyecto, redesplegar y comprobar que sigue ahí (persistencia del volumen).
+- Deploy Logs debe mostrar `[db] migraciones aplicadas…` y `[api] escuchando en http://0.0.0.0:<PORT>`.
 
-## Costo
+## Errores típicos
 
-La página consultada el22-11-2026 muestra créditos limitados en Free y un mínimo de USD5/mes en Hobby, con consumo adicional posible. No es una cotización de esta aplicación ni una promesa de servicio gratuito. Verificar plan y límites de la cuenta antes de contratar o ampliar gasto.
+- `SESSION_SECRET es obligatorio` → falta la variable.
+- `APP_ORIGIN es obligatorio` → no hay dominio generado ni APP_ORIGIN.
+- `No se pudo abrir la base de datos` → volumen no montado en `/data` o permisos; revisar el volumen.
+- "Application failed to respond" → la app no arrancó; ver Deploy Logs.
 
-Fuentes: [volúmenes](https://docs.railway.com/volumes), [healthchecks](https://docs.railway.com/deployments/healthchecks), [pre-deploy](https://docs.railway.com/deployments/pre-deploy-command), [precios](https://railway.com/pricing).
+## Respaldo y rollback
+
+Antes de un despliegue con migraciones nuevas, crear un backup del volumen desde Railway (si el plan lo permite). Rollback de app: redesplegar un commit anterior compatible con el esquema; las migraciones son solo aditivas y nunca se hace downgrade automático. No borrar el volumen para corregir fallos.
+
+La base de producción empieza vacía: las cuentas de desarrollo local no se suben.

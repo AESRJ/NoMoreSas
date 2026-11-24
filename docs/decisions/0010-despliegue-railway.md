@@ -1,3 +1,5 @@
+> Actualización23-11-2026: OAuthGoogle ya no es condición del producto observado; producción sigue sin verificarse aquí. ADR0011 y el informe de auditoría prevalecen sobre esa dependencia histórica.
+
 # ADR 0010: despliegue inicial en Railway
 
 Fecha: 2026-11-22. El usuario pidió implementar los últimos cambios y desplegar NoMoreSaaS en Railway.

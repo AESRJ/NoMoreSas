@@ -1,6 +1,6 @@
 {
   "feature_id": "AUTH-GOOGLE",
-  "status": "cancelled",
+  "status": "closed",
   "planner": "codex",
   "executor": "claude-code",
   "spec_dir": "specs/006-acceso-google",
@@ -32,9 +32,7 @@
     "browser smoke360/1280",
     "init.cmd"
   ],
-  "blockers": [
-    "Google client/consent/protected variables and real live flow pending"
-  ],
+  "blockers": [],
   "implementation_report": "progress/impl_AUTH-GOOGLE.md",
   "review_report": "progress/review_AUTH-GOOGLE.md",
   "execution_repository": "https://github.com/AESRJ/NoMoreSaaS_Frontend.git",
@@ -43,12 +41,15 @@
   "activation_dependencies": [
     "UX-REVISION code reviewed"
   ],
-  "external_dependencies": [
-    "GoogleOAuth client/consent/redirect and live verification pending"
-  ],
+  "external_dependencies": [],
   "prepared_at": "2026-11-22",
   "activated_at": "2026-11-22",
   "activation_evidence": "UX-REVISION code reviewed; review_UX-REVISION.md; frozen005/T004; liveGoogle gate still pending",
-  "code_reviewed": true,
-  "user_decision_2026_11_22": "Acceso con Google retirado por decision del usuario"
+  "code_reviewed": false,
+  "user_decision_2026_11_22": "Acceso con Google retirado por decision del usuario",
+  "reviewed_product_commit": "b217344623a8e41829fbd796f290239d998ae4f2",
+  "audit_report": "docs/reviews/2026-11-23-cambios-claude.md",
+  "implementation_authorized": false,
+  "outcome": "withdrawn",
+  "resolution": "Google retirado en7944474; no reimplementar. Evidencia anterior historica."
 }

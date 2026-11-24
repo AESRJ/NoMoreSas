@@ -1,3 +1,5 @@
+> Nota vigente23-11-2026: documento histórico; Google y/o recopilador/importación fueron retirados del producto. Ver ADR0011 y docs/reviews/2026-11-23-cambios-claude.md. No usarlo como autorización de implementación.
+
 # ADR 0009: diagnóstico revisable y opción manual
 
 Fecha: 2026-11-22. Propuesta técnica definida dentro del alcance solicitado.

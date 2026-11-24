@@ -1,3 +1,5 @@
+> Nota vigente23-11-2026: documento histórico; Google y/o recopilador/importación fueron retirados del producto. Ver ADR0011 y docs/reviews/2026-11-23-cambios-claude.md. No usarlo como autorización de implementación.
+
 # ADR 0008: Google como identidad externa
 
 Fecha: 2026-11-22. Alcance autorizado por el usuario; implementación pendiente de Claude.

@@ -1,3 +1,5 @@
+> Nota vigente23-11-2026: documento histórico; Google y/o recopilador/importación fueron retirados del producto. Ver ADR0011 y docs/reviews/2026-11-23-cambios-claude.md. No usarlo como autorización de implementación.
+
 # Preparar «Continuar con Google»
 
 Esto registra NoMoreSaaS ante Google; no es tu contraseña de Google. El código de006 ya incluye el botón «Continuar con Google» en /entrar y /registro y la vinculación desde «Mi cuenta», pero solo se activan cuando las tres variables de abajo están configuradas. Hasta entonces la aplicación muestra que Google no está disponible y sigue funcionando con correo y contraseña. El inicio de sesión real con Google aún no se ha probado: necesita completar estos pasos.

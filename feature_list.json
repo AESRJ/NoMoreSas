@@ -80,26 +80,34 @@
       "status": "blocked",
       "spec_dir": "specs/006-acceso-google",
       "owner": "claude-code",
-      "evidence": "progress/review_AUTH-GOOGLE.md",
-      "code_reviewed": true,
-      "external_blocker": "Google OAuth client/consent/variables/live pending"
+      "evidence": "docs/reviews/2026-11-23-cambios-claude.md",
+      "code_reviewed": false,
+      "external_blocker": null,
+      "disposition": "withdrawn",
+      "implementation_current": false,
+      "status_note": "Retirada en7944474. blocked es representacion compatible del indice; no espera clienteGoogle ni autoriza reimplementacion. Revision historica en progress/review_AUTH-GOOGLE.md."
     },
     {
       "id": "MVP-EQUIPO-ASISTIDO",
       "title": "Equipo detectado o importado y planes claros con seguridad",
-      "status": "in_progress",
+      "status": "blocked",
       "spec_dir": "specs/007-equipo-y-plan-seguro",
       "owner": "claude-code",
-      "evidence": null,
-      "code_reviewed": false
+      "evidence": "docs/reviews/2026-11-23-cambios-claude.md",
+      "code_reviewed": false,
+      "implementation_status": "implemented_scope_reduced_manual_browser",
+      "external_blocker": "Revision integrada del HEADfinal pendiente; importacion/recopilador retirados enb217344. Sin implementacion activa."
     },
     {
       "id": "DEPLOY-RAILWAY",
       "title": "Preparación de producción y despliegue inicialRailway",
-      "status": "pending",
+      "status": "blocked",
       "spec_dir": "specs/008-preparacion-railway",
       "owner": "claude-code",
-      "evidence": null
+      "evidence": "docs/reviews/2026-11-23-cambios-claude.md",
+      "code_reviewed": false,
+      "implementation_status": "production_candidate_observed",
+      "external_blocker": "BuildDocker y releasevivo/persistencia/HTTPS/recuperacion/cuenta/costos no verificados por esta auditoria."
     }
   ]
 }

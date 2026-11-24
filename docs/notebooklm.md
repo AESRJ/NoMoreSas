@@ -43,3 +43,7 @@ La memoria no habilita tareas ni modifica roles. Su contenido es contexto recupe
 
 ## Sincronización2026-11-22
 Codex consultó el cuaderno del proyecto y contrastó el flujo contra docs/product/brief.md/PDF. La memoria técnica002 estaba desactualizada; se añadió fuente de texto Estado verificado NoMoreSaaS — cierre004 —2026-11-22 (ID1e33b13e-b304-4bf0-837f-26497586b56f), estado ready. Describe HEADf5504bf, siete commits, verificaciones reales y límites; no incluye secretos ni configuraciones. Git sigue siendo autoridad. No se infiere autenticación del MCPNotebookLM de Claude desde la conexión de Codex.
+
+## Auditoria vigente del 23-11-2026
+Cuaderno3323fc9c-9d8c-4d11-85ba-30944415fa7f. Fuente4f9c6709-18a8-4c3e-9701-99b84df19474, titulo VIGENTE ? Auditoria de main b217344: Google retirado, equipo manual/navegador y Railway ? 2026-11-23. source_add exitoso (ready=false inicialmente); source_get_content posterior exitoso y texto indexado recuperado, comprobados HEAD, commits, cambios y final del inventario. No se usa ready inicial como prueba de procesamiento concluido.
+Contenido enviado: docs/reviews/2026-11-23-cambios-claude.md completo, sin secretos ni bases. Registra siete commits/81archivos, retiroGoogle/importacionWindows, minimo8 y discrepanciaNIST, candidatoRailway y pruebas declaradas frente a verificaciones actuales. Las fuentes anteriores siguen historicas; esta revision y Git prevalecen sobre sus bloqueosGoogle/cuotas. No se borraron fuentes ni se modifico el producto.
